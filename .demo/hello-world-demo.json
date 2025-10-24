@@ -1,0 +1,64 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "Designing Autonomous AI Agents",
+  "version": 2,
+  "demos": [
+    {
+      "title": "Show the title",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/1-title.md"
+        }
+      ]
+    },
+    {
+      "title": "Show the presenter",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/2-presenter.md"
+        }
+      ]
+    },
+    {
+      "title": "Show the slide",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/intro-start.md"
+        }
+      ]
+    },
+    {
+      "title": "Highlight the code",
+      "description": "Highlight the `helloWorld` function in the code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "index.js"
+        },
+        {
+          "action": "highlight",
+          "path": "index.js",
+          "position": "1:3"
+        }
+      ]
+    },
+    {
+      "title": "Show the end slide",
+      "description": "Show the end slide.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/intro-end.md"
+        }
+      ]
+    }
+  ],
+  "description": "How to build autonomous agents with Microsoft Agent Framework and Azure Foundry",
+  "timer": 55
+}
