@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using AgentsDemo.Scenarios;
 
 namespace AgentsDemo.Services;
@@ -11,7 +12,7 @@ public sealed class ScenarioRunner
         _scenarios = scenarios.ToList();
     }
 
-    public void Run()
+    public async Task RunAsync()
     {
         while (true)
         {
@@ -42,7 +43,7 @@ public sealed class ScenarioRunner
 
             Console.Clear();
             var scenario = _scenarios[choice - 1];
-            scenario.Run();
+            await scenario.RunAsync().ConfigureAwait(false);
 
             Console.WriteLine("\nPress any key to return to the menu...");
             Console.ReadKey(true);

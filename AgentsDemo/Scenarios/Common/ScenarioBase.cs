@@ -6,14 +6,14 @@ public abstract class ScenarioBase : IScenario
 {
     public abstract string Name { get; }
 
-    public void Run()
+    public async Task RunAsync()
     {
         var stopwatch = Stopwatch.StartNew();
         Console.WriteLine($"=== {Name} ===");
-        Execute();
+        await ExecuteAsync().ConfigureAwait(false);
         stopwatch.Stop();
         Console.WriteLine($"=== Completed in {stopwatch.Elapsed} ===");
     }
 
-    protected abstract void Execute();
+    protected abstract Task ExecuteAsync();
 }

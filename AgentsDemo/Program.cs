@@ -3,10 +3,10 @@ using AgentsDemo.Services;
 
 var scenarios = new IScenario[]
 {
-    new DemoScenarioOne(),
-    new DemoScenarioTwo(),
-    new DemoScenarioThree(),
+    new SimpleChatCompletion(),
+    new PassingImagesToAgents(),
+    new MultiTurnChat(),
 };
 
 var runner = new ScenarioRunner(scenarios);
-runner.Run();
+await runner.RunAsync();
