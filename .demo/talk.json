@@ -24,6 +24,16 @@
       ]
     },
     {
+      "title": "Show the agenda",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/3-agenda.md"
+        }
+      ]
+    },
+    {
       "title": "Show the slide",
       "description": "Show a slide and highlight a function in code.",
       "steps": [

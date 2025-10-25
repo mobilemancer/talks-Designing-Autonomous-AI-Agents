@@ -1,6 +1,7 @@
 ---
 theme: frost
 layout: intro
+transition: slideLeft
 ---
 
 # Building Autonomous Agents 🤖
