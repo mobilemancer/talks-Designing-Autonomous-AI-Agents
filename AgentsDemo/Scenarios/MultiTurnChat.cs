@@ -46,7 +46,7 @@ public sealed class MultiTurnChat : ScenarioBase
 
         Console.WriteLine("---");
 
-        Console.WriteLine("Thread as JSON:");
-        Console.WriteLine(thread.Serialize(JsonSerializerOptions.Web));
+        // Console.WriteLine("Thread as JSON:");
+        // Console.WriteLine(thread.Serialize(JsonSerializerOptions.Web));
     }
 }
