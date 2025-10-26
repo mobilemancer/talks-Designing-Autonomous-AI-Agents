@@ -34,28 +34,19 @@ public sealed class MultiTurnChat : ScenarioBase
 
         AgentThread thread = agent.GetNewThread();
 
-        var response = await agent.RunAsync("Tell me a joke about programmers.", thread);
+        var prompt = "Tell me a joke about programmers.";
+        Console.WriteLine(prompt);
+        var response = await agent.RunAsync(prompt, thread);
         Console.WriteLine(response);
 
-        response = await agent.RunAsync("Now tell me why that's funny.", thread);
+        prompt = "Now tell me why that's funny.";
+        Console.WriteLine(prompt);
+        response = await agent.RunAsync(prompt, thread);
         Console.WriteLine(response);
 
         Console.WriteLine("---");
 
-        var serializedThread = JsonSerializer.Serialize(
-            thread,
-            new JsonSerializerOptions { WriteIndented = true }
-        );
         Console.WriteLine("Thread as JSON:");
-        Console.WriteLine(serializedThread);
-
-        var deserializedThread = JsonSerializer.Deserialize<JsonElement>(serializedThread);
-        Console.WriteLine("\nDeserialized thread:");
-        Console.WriteLine(
-            JsonSerializer.Serialize(
-                deserializedThread,
-                new JsonSerializerOptions { WriteIndented = true }
-            )
-        );
+        Console.WriteLine(thread.Serialize(JsonSerializerOptions.Web));
     }
 }
