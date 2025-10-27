@@ -4,7 +4,7 @@
   "version": 2,
   "demos": [
     {
-      "title": "Show the title",
+      "title": "Title",
       "description": "Show a slide and highlight a function in code.",
       "steps": [
         {
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "title": "Show the presenter",
+      "title": "Presenter intro",
       "description": "Show a slide and highlight a function in code.",
       "steps": [
         {
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "title": "Show the agenda",
+      "title": "Agenda",
       "description": "Show a slide and highlight a function in code.",
       "steps": [
         {
@@ -34,14 +34,47 @@
       ]
     },
     {
-      "title": "Show the slide",
+      "title": "Year of agents",
       "description": "Show a slide and highlight a function in code.",
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/intro-start.md"
+          "path": ".demo/slides/4-year-of-agents.md"
         }
       ]
+    },
+    {
+      "title": "Agent definition",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/5-agent-definition.md"
+        }
+      ],
+      "id": "demo-mh84rq3f-bnqv"
+    },
+    {
+      "title": "Microsoft Agetn Framework",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF.md"
+        }
+      ],
+      "id": "demo-mh84rzcg-t2ru"
+    },
+    {
+      "title": "Foundry",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/7-foundry.md"
+        }
+      ],
+      "id": "demo-mh84sd38-7ocs"
     },
     {
       "title": "Highlight the code",

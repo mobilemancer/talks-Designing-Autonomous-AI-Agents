@@ -1,0 +1,48 @@
+{
+    "storeState": {
+        "messages": [
+            {
+                "role": "user",
+                "contents": [
+                    {
+                        "$type": "text",
+                        "text": "Tell me a joke about programmers."
+                    }
+                ]
+            },
+            {
+                "authorName": "Professional humorist",
+                "createdAt": "2025-10-26T10:09:33+00:00",
+                "role": "assistant",
+                "contents": [
+                    {
+                        "$type": "text",
+                        "text": "Why do programmers prefer dark mode?\n\nBecause light attracts bugs!"
+                    }
+                ],
+                "messageId": "chatcmpl-CUrynrubh8RZPYkHYfcth6NhhVqcI"
+            },
+            {
+                "role": "user",
+                "contents": [
+                    {
+                        "$type": "text",
+                        "text": "Now tell me why that's funny."
+                    }
+                ]
+            },
+            {
+                "authorName": "Professional humorist",
+                "createdAt": "2025-10-26T10:09:34+00:00",
+                "role": "assistant",
+                "contents": [
+                    {
+                        "$type": "text",
+                        "text": "Absolutely! Here’s why that joke works:\n\nIt’s a play on words with a double meaning:\n\n1. **Literal Meaning (Light Attracts Bugs):** In the natural world, bugs (insects) are drawn to light sources, like lamps — so \"light attracts bugs\".\n\n2. **Programming Meaning (\"Bugs\" as Errors):** In software, \"bugs\" are mistakes or problems in code. \"Dark mode\" is a color scheme that many programmers prefer, because it's easier on the eyes and (jokingly) avoids the \"light\".\n\nSo the joke makes a pun: Choosing dark mode helps \"avoid bugs\". In reality, it doesn’t affect bugs (errors) in code, but it does link the two meanings in a clever, nerdy way. That's why it's funny to programmers!"
+                    }
+                ],
+                "messageId": "chatcmpl-CUryo0VK96WEFEPGY0SOhrGF7MaRQ"
+            }
+        ]
+    }
+}
