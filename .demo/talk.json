@@ -55,7 +55,7 @@
       "id": "demo-mh84rq3f-bnqv"
     },
     {
-      "title": "Microsoft Agetn Framework",
+      "title": "Microsoft Agent Framework",
       "description": "Show a slide and highlight a function in code.",
       "steps": [
         {
@@ -75,6 +75,17 @@
         }
       ],
       "id": "demo-mh84sd38-7ocs"
+    },
+    {
+      "title": "Memory",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/8-memory.md"
+        }
+      ],
+      "id": "demo-mh9m4nk3-g1p2"
     },
     {
       "title": "Highlight the code",
