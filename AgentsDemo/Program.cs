@@ -8,6 +8,7 @@ var scenarios = new IScenario[]
     new MultiTurnChat(),
     new SimpleTool(),
     new AgentAsTool(),
+    new MCPTools()
 };
 
 var runner = new ScenarioRunner(scenarios);

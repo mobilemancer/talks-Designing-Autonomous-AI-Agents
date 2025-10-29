@@ -94,7 +94,7 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/MultiTurnChat.cs",
-          "position": "28",
+          "position": "19",
           "highlightWholeLine": true
         }
       ]
@@ -120,33 +120,7 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/SimpleTool.cs",
-          "position": "26",
-          "highlightWholeLine": true
-        }
-      ]
-    },
-    {
-      "title": "Tool I Slide",
-      "description": "Show a slide ",
-      "steps": [
-        {
-          "action": "openSlide",
-          "path": ".demo/slides/9-tools-I.md"
-        }
-      ]
-    },
-    {
-      "title": "Tool I Code",
-      "description": "Highlight code.",
-      "steps": [
-        {
-          "action": "open",
-          "path": "AgentsDemo/Scenarios/SimpleTool.cs"
-        },
-        {
-          "action": "highlight",
-          "path": "AgentsDemo/Scenarios/SimpleTool.cs",
-          "position": "26",
+          "position": "17",
           "highlightWholeLine": true
         }
       ]
@@ -167,12 +141,49 @@
       "steps": [
         {
           "action": "open",
-          "path": "AgentsDemo/Scenarios/SimpleTool.cs"
+          "path": "AgentsDemo/Scenarios/AgentAsTool.cs"
         },
         {
           "action": "highlight",
-          "path": "AgentsDemo/Scenarios/SimpleTool.cs",
-          "position": "26",
+          "path": "AgentsDemo/Scenarios/AgentAsTool.cs",
+          "position": "28",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool III Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/9-tools-III.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool IV Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/9-tools-IV.md"
+        }
+      ],
+      "id": "demo-mhcintvd-u63s"
+    },
+    {
+      "title": "Tool IV Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/MCPTools.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/MCPTools.cs",
+          "position": "18",
           "highlightWholeLine": true
         }
       ]
