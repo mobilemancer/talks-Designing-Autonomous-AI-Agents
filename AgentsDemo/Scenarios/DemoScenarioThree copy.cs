@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 namespace AgentsDemo.Scenarios;
 
 public sealed class MultiTurnChat2 : ScenarioBase

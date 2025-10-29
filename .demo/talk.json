@@ -4,8 +4,8 @@
   "version": 2,
   "demos": [
     {
-      "title": "Title",
-      "description": "Show a slide and highlight a function in code.",
+      "title": "Title slide",
+      "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
@@ -24,8 +24,8 @@
       ]
     },
     {
-      "title": "Agenda",
-      "description": "Show a slide and highlight a function in code.",
+      "title": "Agenda slide",
+      "description": "Show a slide",
       "steps": [
         {
           "action": "openSlide",
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "title": "Year of agents",
-      "description": "Show a slide and highlight a function in code.",
+      "title": "Year of agents slide",
+      "description": "Show a slide",
       "steps": [
         {
           "action": "openSlide",
@@ -51,8 +51,7 @@
           "action": "openSlide",
           "path": ".demo/slides/5-agent-definition.md"
         }
-      ],
-      "id": "demo-mh84rq3f-bnqv"
+      ]
     },
     {
       "title": "Microsoft Agent Framework",
@@ -62,8 +61,7 @@
           "action": "openSlide",
           "path": ".demo/slides/6-MAF.md"
         }
-      ],
-      "id": "demo-mh84rzcg-t2ru"
+      ]
     },
     {
       "title": "Foundry",
@@ -73,19 +71,59 @@
           "action": "openSlide",
           "path": ".demo/slides/7-foundry.md"
         }
-      ],
-      "id": "demo-mh84sd38-7ocs"
+      ]
     },
     {
-      "title": "Memory",
-      "description": "Show a slide and highlight a function in code.",
+      "title": "Memory Slide",
+      "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/8-memory.md"
         }
-      ],
-      "id": "demo-mh9m4nk3-g1p2"
+      ]
+    },
+    {
+      "title": "Memory Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/MultiTurnChat.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/MultiTurnChat.cs",
+          "position": "28",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool I Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/9-tools-I.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool I Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/SimpleTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/SimpleTool.cs",
+          "position": "26",
+          "highlightWholeLine": true
+        }
+      ]
     },
     {
       "title": "Highlight the code",

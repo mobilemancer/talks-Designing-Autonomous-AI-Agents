@@ -1,8 +1,8 @@
 namespace AgentsDemo.Scenarios;
 
-public sealed class MultiTurnChat : ScenarioBase
+public sealed class SimpleTool : ScenarioBase
 {
-    public override string Name => "Multi turn chat";
+    public override string Name => "Simple tool calling";
 
     protected override async Task ExecuteAsync()
     {
@@ -21,24 +21,25 @@ public sealed class MultiTurnChat : ScenarioBase
         )
             .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
             .CreateAIAgent(
-                name: "Professional humorist",
-                instructions: "You are good at telling jokes."
+                name: "Wether reporter",
+                instructions: "Report the weather for a given location requested by the user. Use tools",
+                tools: [AIFunctionFactory.Create(GetWeather)]
             );
 
         AgentThread thread = agent.GetNewThread();
 
-        var prompt = "Tell me a joke about programmers.";
+        var prompt = "Tell me the weather in Malmö.";
         Console.WriteLine(prompt);
         var response = await agent.RunAsync(prompt, thread);
         Console.WriteLine(response);
+    }
 
-        prompt = "Now tell me why that's funny.";
-        Console.WriteLine(prompt);
-        response = await agent.RunAsync(prompt, thread);
-        Console.WriteLine(response);
-
-        // Console.WriteLine("---");
-        // Console.WriteLine("Thread as JSON:");
-        // Console.WriteLine(thread.Serialize(JsonSerializerOptions.Web));
+    [Description("Get the weather for a given location.")]
+    static string GetWeather([Description("The location to get the weather for.")] string location)
+    {
+        Console.WriteLine($"Weather requested for {location}.");
+        return location == "Malmö"
+            ? "The weather in Malmö is 5 degrees but still awesome!"
+            : $"The weather in {location} cold and booring.";
     }
 }

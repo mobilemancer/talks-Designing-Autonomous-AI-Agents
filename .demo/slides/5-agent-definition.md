@@ -10,6 +10,6 @@ image: .demo/img/agent-definition.svg
 
 🧠 Memory (?)
 
-🛠️ Agency Tools/MCP
+🛠️ Agency Tools / MCP
 
-➰ In a loop
+➰ Executes in a loop
