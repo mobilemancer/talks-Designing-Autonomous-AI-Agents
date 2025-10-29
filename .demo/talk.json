@@ -126,6 +126,58 @@
       ]
     },
     {
+      "title": "Tool I Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/9-tools-I.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool I Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/SimpleTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/SimpleTool.cs",
+          "position": "26",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool II Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/9-tools-II.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool II Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/SimpleTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/SimpleTool.cs",
+          "position": "26",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
       "title": "Highlight the code",
       "description": "Highlight the `helloWorld` function in the code.",
       "steps": [

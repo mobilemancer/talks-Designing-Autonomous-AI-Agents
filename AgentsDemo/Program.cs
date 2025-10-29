@@ -7,6 +7,7 @@ var scenarios = new IScenario[]
     new PassingImagesToAgents(),
     new MultiTurnChat(),
     new SimpleTool(),
+    new AgentAsTool(),
 };
 
 var runner = new ScenarioRunner(scenarios);
