@@ -2,19 +2,10 @@ namespace AgentsDemo.Scenarios;
 
 public sealed class SimpleChatCompletion : ScenarioBase
 {
-    public override string Name => "Scenario One - Simple Chat";
+    public override string Name => "Simple Chat Agent";
 
     protected override async Task ExecuteAsync()
     {
-        Console.WriteLine("Simple chat agent.");
-
-        var endpoint =
-            Environment.GetEnvironmentVariable("talks-autonomous-agents-foundry-uri")
-            ?? throw new InvalidOperationException("Missing Azure OpenAI endpoint.");
-        var apiKey =
-            Environment.GetEnvironmentVariable("talks-autonomous-agents-foundry-key")
-            ?? throw new InvalidOperationException("Missing Azure OpenAI key.");
-
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)

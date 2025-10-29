@@ -6,15 +6,6 @@ public sealed class PassingImagesToAgents : ScenarioBase
 
     protected override async Task ExecuteAsync()
     {
-        Console.WriteLine("Passing images to an agent.");
-
-        var endpoint =
-            Environment.GetEnvironmentVariable("talks-autonomous-agents-foundry-uri")
-            ?? throw new InvalidOperationException("Missing Azure OpenAI endpoint.");
-        var apiKey =
-            Environment.GetEnvironmentVariable("talks-autonomous-agents-foundry-key")
-            ?? throw new InvalidOperationException("Missing Azure OpenAI key.");
-
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)

@@ -6,20 +6,11 @@ public sealed class AgentAsTool : ScenarioBase
 
     protected override async Task ExecuteAsync()
     {
-        Console.WriteLine(Name);
-
-        var endpoint =
-            Environment.GetEnvironmentVariable("talks-autonomous-agents-foundry-uri")
-            ?? throw new InvalidOperationException("Missing Azure OpenAI endpoint.");
-        var apiKey =
-            Environment.GetEnvironmentVariable("talks-autonomous-agents-foundry-key")
-            ?? throw new InvalidOperationException("Missing Azure OpenAI key.");
-
         AIAgent weatherAgent = new AzureOpenAIClient(
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
+            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41mini))
             .CreateAIAgent(
                 name: "Wether reporter",
                 instructions: "Report the weather for a given location requested by the user. Use tools",
@@ -32,7 +23,7 @@ public sealed class AgentAsTool : ScenarioBase
         )
             .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
             .CreateAIAgent(
-                name: "Achat client",
+                name: "A chat client",
                 instructions: "You are a helpful agent",
                 tools: [weatherAgent.AsAIFunction()]
             );
