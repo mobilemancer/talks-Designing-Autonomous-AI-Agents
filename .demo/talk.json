@@ -89,11 +89,11 @@
       "steps": [
         {
           "action": "open",
-          "path": "AgentsDemo/Scenarios/MultiTurnChat.cs"
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs"
         },
         {
           "action": "highlight",
-          "path": "AgentsDemo/Scenarios/MultiTurnChat.cs",
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
           "position": "19",
           "highlightWholeLine": true
         }
@@ -115,11 +115,11 @@
       "steps": [
         {
           "action": "open",
-          "path": "AgentsDemo/Scenarios/SimpleTool.cs"
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs"
         },
         {
           "action": "highlight",
-          "path": "AgentsDemo/Scenarios/SimpleTool.cs",
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs",
           "position": "17",
           "highlightWholeLine": true
         }
@@ -141,11 +141,11 @@
       "steps": [
         {
           "action": "open",
-          "path": "AgentsDemo/Scenarios/AgentAsTool.cs"
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs"
         },
         {
           "action": "highlight",
-          "path": "AgentsDemo/Scenarios/AgentAsTool.cs",
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs",
           "position": "28",
           "highlightWholeLine": true
         }
@@ -178,12 +178,12 @@
       "steps": [
         {
           "action": "open",
-          "path": "AgentsDemo/Scenarios/MCPTools.cs"
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs"
         },
         {
           "action": "highlight",
-          "path": "AgentsDemo/Scenarios/MCPTools.cs",
-          "position": "18",
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
+          "position": "20",
           "highlightWholeLine": true
         }
       ]

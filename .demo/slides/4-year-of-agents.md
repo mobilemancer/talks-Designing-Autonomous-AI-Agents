@@ -7,8 +7,6 @@ image: .demo/img/agent.png
 # The Year of the Agent
 
 - We had the year of the LLM
-- Usage moving beyond wrappers
-- RAG everywhere
-- Tools and MCP trending
-
-_It's time for Agents_
+- Then wrappers everywhere
+- Previous year was RAG everywhere and tool use
+- Now MCP is trending, enabling autonomous agents

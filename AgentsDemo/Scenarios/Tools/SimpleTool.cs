@@ -12,7 +12,7 @@ public sealed class SimpleTool : ScenarioBase
         )
             .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
             .CreateAIAgent(
-                name: "Wether reporter",
+                name: "Weather reporter",
                 instructions: "Report the weather for a given location requested by the user. Use tools",
                 tools: [AIFunctionFactory.Create(GetWeather)]
             );
