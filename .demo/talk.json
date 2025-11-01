@@ -169,8 +169,7 @@
           "action": "openSlide",
           "path": ".demo/slides/9-tools-IV.md"
         }
-      ],
-      "id": "demo-mhcintvd-u63s"
+      ]
     },
     {
       "title": "Tool IV Code",
@@ -184,6 +183,44 @@
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
           "position": "20",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-metacognition.md"
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "69:84",
+          "highlightWholeLine": true
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "59:60",
+          "highlightWholeLine": true
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "46:47",
           "highlightWholeLine": true
         }
       ]
