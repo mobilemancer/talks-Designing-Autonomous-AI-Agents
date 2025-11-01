@@ -226,27 +226,96 @@
       ]
     },
     {
-      "title": "Highlight the code",
-      "description": "Highlight the `helloWorld` function in the code.",
+      "title": "Metacognition Code I",
+      "description": "Highlight code.",
       "steps": [
         {
           "action": "open",
-          "path": "index.js"
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
         },
         {
           "action": "highlight",
-          "path": "index.js",
-          "position": "1:3"
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "69:84",
+          "highlightWholeLine": true
         }
       ]
     },
     {
-      "title": "Show the end slide",
-      "description": "Show the end slide.",
+      "title": "Metacognition Code II",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "59:60",
+          "highlightWholeLine": true
+        },
+      ]
+    },
+    {
+      "title": "Metacognition Code III",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "46:47",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Code IV",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "16:28",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "11 Models",
+      "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/intro-end.md"
+          "path": ".demo/slides/11-good-models.md"
+        }
+      ]
+    },
+    {
+      "title": "12 Hard Things",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/12-hard-things.md"
+        }
+      ]
+    },
+    {
+      "title": "12 Hard Things",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/the-end.md"
         }
       ]
     }
