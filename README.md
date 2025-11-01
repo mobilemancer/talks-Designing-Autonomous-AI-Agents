@@ -8,7 +8,7 @@ Additionally, we'll explore ways to make our agents smarter by giving them memor
 
 - practical guide to building AI agents using the .NET ecosystem, and Azure services like AI Foundry.
 - give the agents reasoning
-- What are the best models, and why
 - giving them memory
 - access to tool
 - ability to evolve over time
+- What are the best models, and why
