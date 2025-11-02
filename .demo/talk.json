@@ -331,7 +331,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/12-hard-things.md"
+          "path": ".demo/slides/12-hard-things-I.md"
         }
       ]
     },
