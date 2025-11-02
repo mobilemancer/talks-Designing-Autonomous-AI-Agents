@@ -5,10 +5,12 @@ layout: two-columns
 
 
 
-## LinkedIn QR
-![LinkedIn](.demo/img/linkedin-qr.png)
+## LinkedIn
+
+<img width="75%" src=".demo/img/linkedin-qr.png" alt="LinkedIn">
 
 ::right::
 
 ## Repo QR  
-![Repo](.demo/img/gh-repo-qr.png)
+
+<img width="70%" src=".demo/img/gh-repo-qr.png" alt="Repo">
