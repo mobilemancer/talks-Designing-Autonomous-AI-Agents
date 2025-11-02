@@ -14,6 +14,5 @@ layout: default
 
 ## Long term memory
 
+TODO
 <https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-memory?pivots=programming-language-csharp>
-
-_show memory impl?_

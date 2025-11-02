@@ -13,7 +13,7 @@ public sealed class MCPTools : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT4o))
+            .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT4o))
             .CreateAIAgent(
                 name: "A chat client",
                 instructions: "You answer questions related to GitHub repositories only.",

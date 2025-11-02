@@ -74,6 +74,32 @@
       ]
     },
     {
+      "title": "Constructing an Agent",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/7.5-build-agent.md"
+        }
+      ]
+    },
+    {
+      "title": "Constructing an Agent - Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/SimpleChat.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/SimpleChat.cs",
+          "position": "9:17",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
       "title": "Memory Slide",
       "description": "Show a slide ",
       "steps": [

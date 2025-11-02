@@ -6,8 +6,7 @@ image: .demo/img/foundry.jpg
 
 # Azure Foundry
 
-- The place to spinn up AI resources in Azure
-- Models
+- **Models**
 - Eval
 - Tracing
 - _Agent Service_

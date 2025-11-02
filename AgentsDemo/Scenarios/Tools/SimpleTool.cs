@@ -10,7 +10,7 @@ public sealed class SimpleTool : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
+            .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41))
             .CreateAIAgent(
                 name: "Weather reporter",
                 instructions: "Report the weather for a given location requested by the user. Use tools",

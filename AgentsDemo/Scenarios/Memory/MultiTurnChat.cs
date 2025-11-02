@@ -10,7 +10,7 @@ public sealed class MultiTurnChat : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
+            .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41))
             .CreateAIAgent(
                 name: "Professional humorist",
                 instructions: "You are good at telling jokes."

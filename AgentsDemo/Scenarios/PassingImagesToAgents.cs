@@ -10,7 +10,7 @@ public sealed class PassingImagesToAgents : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT4o)) //chose your model
+            .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT4o)) //chose your model
             .CreateAIAgent(
                 name: "Vision Agent",
                 instructions: "You are a helpful agent that can analyze images"

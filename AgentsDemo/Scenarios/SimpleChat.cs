@@ -10,7 +10,7 @@ public sealed class SimpleChatCompletion : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41)) //chose your model
+            .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41)) //chose your model
             .CreateAIAgent(
                 name: "Professional humorist",
                 instructions: "You are good at telling jokes."

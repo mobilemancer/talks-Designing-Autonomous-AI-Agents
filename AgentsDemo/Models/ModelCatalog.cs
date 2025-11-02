@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace AgentsDemo.Models;
 
 public enum Model
@@ -10,7 +8,7 @@ public enum Model
     GPT5mini,
 }
 
-public static class ModelCatalog
+public static class ModelHelper
 {
     private static readonly IReadOnlyDictionary<Model, string> DeploymentNames = new Dictionary<
         Model,

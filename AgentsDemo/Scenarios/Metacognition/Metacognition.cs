@@ -12,7 +12,7 @@ public sealed class Metagognition : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
+            .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41))
             .CreateAIAgent(
                 name: "Fact gatherer",
                 instructions: @"
@@ -75,7 +75,7 @@ public sealed class Metagognition : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-            .GetChatClient(ModelCatalog.GetDeploymentName(Model.GPT41))
+            .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41))
             .CreateAIAgent(
                 name: "Search agent",
                 instructions: "You are simulating search by returning a long rant on the users subject"

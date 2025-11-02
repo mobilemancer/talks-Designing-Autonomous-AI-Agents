@@ -6,10 +6,11 @@ image: .demo/img/agent-definition.svg
 
 # What is an agent
 
-🤖 Model interaction
+🤖 Model interaction (LLM, SLM, ML Model)
 
 🧠 Memory (?)
 
-🛠️ Agency Tools / MCP
+🛠️ Agency - Tools / Function calling / MCP
 
-➰ Executes in a loop
+➰ Execute in a loop - until task finisehd
+
