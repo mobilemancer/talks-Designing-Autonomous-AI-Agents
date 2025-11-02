@@ -21,7 +21,7 @@ transition: fadeIn
 
 ::right::
 
-# Price 📈
+# Token Price 📈
 
 - MSFT (Phi-series)
 - Google (Gemini)
