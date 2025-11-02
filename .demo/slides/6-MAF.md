@@ -1,6 +1,7 @@
 ---
 theme: frost
 layout: default
+transition: fadeIn
 ---
 
 # Microsoft Agent Framework

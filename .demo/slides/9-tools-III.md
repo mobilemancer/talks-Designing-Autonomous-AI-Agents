@@ -1,6 +1,7 @@
 ---
 theme: frost
 layout: default
+transition: fadeIn
 ---
 
 # Built in Tools in Azure Foundry

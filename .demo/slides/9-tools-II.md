@@ -1,6 +1,7 @@
 ---
 theme: frost
 layout: default
+transition: fadeIn
 ---
 
 # Using Agents as Tools

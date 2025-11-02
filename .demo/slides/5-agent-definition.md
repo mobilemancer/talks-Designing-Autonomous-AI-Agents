@@ -2,6 +2,7 @@
 theme: frost
 layout: image-right
 image: .demo/img/agent-definition.svg
+transition: fadeIn
 ---
 
 # What is an agent
@@ -13,4 +14,3 @@ image: .demo/img/agent-definition.svg
 🛠️ Agency - Tools / Function calling / MCP
 
 ➰ Execute in a loop - until task finisehd
-

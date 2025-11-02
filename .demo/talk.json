@@ -15,7 +15,7 @@
     },
     {
       "title": "Presenter intro",
-      "description": "Show a slide and highlight a function in code.",
+      "description": "Show a slide",
       "steps": [
         {
           "action": "openSlide",
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "title": "11 Models",
+      "title": "Models",
       "description": "Show a slide ",
       "steps": [
         {
@@ -326,12 +326,22 @@
       ]
     },
     {
-      "title": "12 Hard Things",
+      "title": "Hard Things",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/12-hard-things.md"
+        }
+      ]
+    },
+    {
+      "title": "Hard Things II",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "imagePreview",
+          "path": ".demo/img/one-does-not.png"
         }
       ]
     },

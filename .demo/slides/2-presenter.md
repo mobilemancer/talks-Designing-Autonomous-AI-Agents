@@ -1,7 +1,7 @@
 ---
 theme: frost
-layout: image-right
-image: .demo/img/with_mvp.png
+layout: two-columns
+transition: fadeIn
 ---
 
 # Andreas Wänqvist
@@ -9,3 +9,7 @@ image: .demo/img/with_mvp.png
 - Microsoft MVP
 - AI Architect @ Voyado
 - OSS Aurelia Core Team
+
+::right::
+
+<img width="99%" src=".demo/img/with_mvp.png" alt="Presenter">

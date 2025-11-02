@@ -2,11 +2,12 @@
 theme: frost
 layout: image-left
 image: .demo/img/agent.png
+transition: fadeIn
 ---
 
-# The Year of the Agent
+# 2025 - Year of the Agents
 
 - We had the year of the LLM
 - Then wrappers everywhere
-- Previous year was RAG everywhere and tool use
-- Now MCP is trending, enabling autonomous agents
+- Previous year was RAG and tool use
+- Now MCP is trending, further enabling autonomous agents

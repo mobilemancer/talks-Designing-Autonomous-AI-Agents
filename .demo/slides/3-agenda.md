@@ -2,6 +2,7 @@
 theme: frost
 layout: image-right
 image: .demo/img/automata.png
+transition: fadeIn
 ---
 
 # Agenda

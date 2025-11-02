@@ -2,6 +2,7 @@
 theme: frost
 layout: image-right
 image: .demo/img/foundry.jpg
+transition: fadeIn
 ---
 
 # Azure Foundry

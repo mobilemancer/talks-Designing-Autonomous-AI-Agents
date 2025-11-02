@@ -1,6 +1,7 @@
 ---
 theme: frost
 layout: two-columns
+transition: fadeIn
 ---
 
 

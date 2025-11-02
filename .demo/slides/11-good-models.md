@@ -1,27 +1,40 @@
 ---
 theme: frost
-layout: default
+layout: two-columns
+transition: fadeIn
 ---
 
-# The "Best" Models
+# Models
 
-- Logic
-  - GPT-5
-  - Grok-4
-  - Gemini-2.5
-- Tool calling
-  - Claude Opus, Sonnet
-  - Google Gemini, Flash
-  - Grok 4
-  - GPT-5
-- Price
-  - MSFT (Phi-series), Google (Gemini), X-AI (Grok), Open AI (GPT-, o-series), Anthropic (Claude, Sonnet)
+## Logic
+
+- GPT-5
+- Grok-4
+- Gemini-2.5
+
+## Tool calling
+
+- Claude Opus, Sonnet
+- Google Gemini, Flash
+- Grok 4
+- GPT-5
+
+::right::
+
+# Price 📈
+
+- MSFT (Phi-series)
+- Google (Gemini)
+- X-AI (Grok)
+- Open AI (GPT-, o-series)
+- Anthropic (Claude, Sonnet)
+
+## Follow the leaderboard
 
 LLM Leaderboard (https://llm-stats.com/benchmarks)
 
 ---
 layout: default
-
 ---
 
 # Available in Azure Foundry
@@ -33,4 +46,3 @@ layout: default
 - DeepSeek
 - Cohere
 - Flux
-

@@ -1,10 +1,19 @@
 ---
 theme: frost
 layout: default
+transition: fadeIn
+
 ---
 
-# The Hard Things Writing Agent Based Systems
+# Hard Things About Writing Agent Based Systems
 
 - Memory
-  - Context
-- Tool calling
+  - Short term
+  - Long term
+  - Context management
+- Tool calling (Functions / Tools / MCPs)
+  - Context management
+  - Tooling confusion
+  - Coercing the model to use them
+- Base models
+  - One does not simply change model...
