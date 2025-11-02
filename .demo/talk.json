@@ -254,7 +254,7 @@
           "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
           "position": "59:60",
           "highlightWholeLine": true
-        },
+        }
       ]
     },
     {
@@ -321,5 +321,5 @@
     }
   ],
   "description": "How to build autonomous agents with Microsoft Agent Framework and Azure Foundry",
-  "timer": 55
+  "timer": 40
 }

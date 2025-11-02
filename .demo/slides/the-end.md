@@ -6,9 +6,9 @@ layout: two-columns
 
 
 ## LinkedIn QR
-![My awesome image](.demo/img/linkedinqr.png)
+![LinkedIn](.demo/img/linkedin-qr.png)
 
 ::right::
 
 ## Repo QR  
-![My awesome image](.demo/img/github-talks-agents.png)
+![Repo](.demo/img/gh-repo-qr.png)
