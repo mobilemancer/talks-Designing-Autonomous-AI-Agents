@@ -7,7 +7,9 @@ transition: fadeIn
 
 # 2025 - Year of the Agents
 
-- We had the year of the LLM
-- Then wrappers everywhere
-- Previous year was RAG and tool use
-- Now MCP is trending, further enabling autonomous agents
+The pieces are finally in place:
+
+- ✅ Powerful foundation models
+- ✅ Context through RAG
+- ✅ Real-world interaction via tools
+- 🚀 MCP unlocking autonomous agents
