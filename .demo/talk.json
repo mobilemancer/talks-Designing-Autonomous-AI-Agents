@@ -31,7 +31,8 @@
           "action": "openSlide",
           "path": ".demo/slides/3-agenda.md"
         }
-      ]
+      ],
+      "disabled": true
     },
     {
       "title": "Year of agents slide",
@@ -79,7 +80,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/7.5-build-agent.md"
+          "path": ".demo/slides/8-build-agent.md"
         }
       ]
     },

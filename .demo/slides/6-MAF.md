@@ -19,7 +19,7 @@ transition: fadeIn
 
 ---
 
-# Microsoft Agent Framework - Agent types
+# Microsoft Agent Framework - Agent Types
 
 | Underlying Inference Service | Description                                                                                       | Service Chat History storage supported | Custom Chat History storage supported |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------------------------- |
@@ -32,11 +32,3 @@ transition: fadeIn
 | OpenAI Assistants            | An agent that uses the OpenAI Assistants service.                                                 | Yes                                    | No                                    |
 | Any other ChatClient         | You can also use any other Microsoft.Extensions.AI.IChatClient implementation to create an agent. | Varies                                 | Varies                                |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------------------------- |
-
----
-
-# Constructing an agent 
-
-**Azure AI Foundry Models**
-
-An agent that uses any of the models deployed in the Azure AI Foundry Service as its backend.

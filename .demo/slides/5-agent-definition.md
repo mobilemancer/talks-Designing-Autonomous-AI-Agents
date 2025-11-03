@@ -5,7 +5,7 @@ image: .demo/img/agent-definition.svg
 transition: fadeIn
 ---
 
-# What is an agent?
+# What is an Agent?
 
 An AI system that combines:
 
