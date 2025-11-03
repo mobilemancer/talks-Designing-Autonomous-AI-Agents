@@ -5,12 +5,14 @@ image: .demo/img/agent-definition.svg
 transition: fadeIn
 ---
 
-# What is an agent
+# What is an agent?
 
-🤖 Model interaction (LLM, SLM, ML Model)
+An AI system that combines:
 
-🧠 Memory (?)
+🤖 **Intelligence** - Language or ML model for decision-making
 
-🛠️ Agency - Tools / Function calling / MCP
+🧠 **Memory** - Maintains context and learns from interactions
 
-➰ Execute in a loop - until task finisehd
+🛠️ **Agency** - Can use tools and take actions via MCP
+
+➰ **Autonomy** - Runs iteratively until goals are achieved
