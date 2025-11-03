@@ -11,6 +11,7 @@ transition: fadeIn
   - Short term
   - Long term
   - Context management
+  - Scratchpad
 - Tool calling (Functions / Tools / MCPs)
   - Context management
   - Tooling confusion
