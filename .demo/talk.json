@@ -105,7 +105,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/8-memory.md"
+          "path": ".demo/slides/9-memory.md"
         }
       ]
     },
@@ -131,7 +131,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/9-tools-I.md"
+          "path": ".demo/slides/10-tools-I.md"
         }
       ]
     },
@@ -157,7 +157,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/9-tools-II.md"
+          "path": ".demo/slides/10-tools-II.md"
         }
       ]
     },
@@ -183,7 +183,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/9-tools-III.md"
+          "path": ".demo/slides/10-tools-III.md"
         }
       ]
     },
@@ -193,7 +193,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/9-tools-IV.md"
+          "path": ".demo/slides/10-tools-IV.md"
         }
       ]
     },
@@ -219,7 +219,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/10-metacognition.md"
+          "path": ".demo/slides/11-metacognition.md"
         }
       ]
     },
@@ -321,7 +321,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/11-good-models.md"
+          "path": ".demo/slides/13-good-models.md"
         }
       ]
     },
@@ -331,7 +331,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/12-hard-things-I.md"
+          "path": ".demo/slides/14-hard-things-I.md"
         }
       ]
     },
