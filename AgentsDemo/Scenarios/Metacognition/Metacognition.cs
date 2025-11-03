@@ -19,7 +19,8 @@ public sealed class Metagognition : ScenarioBase
                 You are a senior content researcher and editor, helping the user gather information.
                 - Before ouputing research content to the user, make sure to do it according to their preferences.
                 - Use search tools to retrieve content.
-                - Update users preferences when needed.",
+                - Update users preferences when needed.
+                ",
                 tools:
                 [
                     AIFunctionFactory.Create(get_user_preferences),

@@ -10,6 +10,7 @@ var scenarios = new IScenario[]
     new AgentAsTool(),
     new MCPTools(),
     new Metagognition(),
+    new Middleware(),
 };
 
 var runner = new ScenarioRunner(scenarios);
