@@ -15,5 +15,6 @@ transition: fadeIn
   - Context management
   - Tooling confusion
   - Coercing the model to use them
-- Base models
+- Models
   - One does not simply change model...
+  - Mix and match for best results
