@@ -13,6 +13,6 @@ An AI system that combines:
 
 🧠 **Memory** - Maintains context, maybe learns
 
-🛠️ **Agency** - Can use tools, functions and MCP to take actions
+🛠️ **Agency** - Use tools, functions or MCPs to take actions
 
 ➰ **Autonomy** - Runs iteratively until goals are achieved
