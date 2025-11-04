@@ -11,5 +11,6 @@ transition: fadeIn
 - Eval
 - Tracing
 - _Agent Service_
+  - Agents
   - Memory
   - Agent to agent
