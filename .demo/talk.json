@@ -147,6 +147,22 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs",
+          "position": "28:35",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool I Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs",
           "position": "17",
           "highlightWholeLine": true
         }
@@ -159,6 +175,22 @@
         {
           "action": "openSlide",
           "path": ".demo/slides/10-tools-II.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool II Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs",
+          "position": "9:18",
+          "highlightWholeLine": true
         }
       ]
     },
@@ -268,6 +300,22 @@
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
           "position": "47:59",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Middleware Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
+          "position": "20:24",
           "highlightWholeLine": true
         }
       ]
