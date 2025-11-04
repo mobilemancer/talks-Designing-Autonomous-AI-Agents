@@ -108,7 +108,10 @@
           "action": "openSlide",
           "path": ".demo/slides/9-memory.md"
         }
-      ]
+      ],
+      "notes": {
+        "path": ".demo/slides/9-memory-notes.md"
+      }
     },
     {
       "title": "Memory Code",
@@ -122,6 +125,22 @@
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
           "position": "19",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Memory Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
+          "position": "23",
           "highlightWholeLine": true
         }
       ]

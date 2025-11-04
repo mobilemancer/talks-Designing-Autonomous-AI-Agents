@@ -9,10 +9,10 @@ transition: fadeIn
 
 An AI system that combines:
 
-🤖 **Intelligence** - Language or ML model for decision-making
+🤖 **Intelligence** - LLM or ML model for decision-making
 
-🧠 **Memory** - Maintains context and learns from interactions
+🧠 **Memory** - Maintains context, maybe learns
 
-🛠️ **Agency** - Can use tools and take actions via MCP
+🛠️ **Agency** - Can use tools, functions and MCP to take actions
 
 ➰ **Autonomy** - Runs iteratively until goals are achieved

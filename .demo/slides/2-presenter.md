@@ -8,6 +8,7 @@ transition: fadeIn
 
 - Microsoft MVP
 - AI Architect @ Voyado
+  - ex MSFT Azure
 - OSS Aurelia Core Team
 
 ::right::
