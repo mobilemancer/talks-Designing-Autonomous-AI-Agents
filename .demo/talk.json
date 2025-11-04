@@ -209,7 +209,65 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
+          "position": "30:55",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool IV Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
           "position": "20",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Middleware Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/11-middleware.md"
+        }
+      ]
+    },
+    {
+      "title": "Middleware Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
+          "position": "31:45",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Middleware Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
+          "position": "47:59",
           "highlightWholeLine": true
         }
       ]
@@ -220,7 +278,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/11-metacognition.md"
+          "path": ".demo/slides/12-metacognition.md"
         }
       ]
     },
@@ -235,19 +293,7 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "69:84",
-          "highlightWholeLine": true
-        },
-        {
-          "action": "highlight",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "59:60",
-          "highlightWholeLine": true
-        },
-        {
-          "action": "highlight",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "46:47",
+          "position": "47:68",
           "highlightWholeLine": true
         }
       ]
@@ -269,38 +315,6 @@
       ]
     },
     {
-      "title": "Metacognition Code II",
-      "description": "Highlight code.",
-      "steps": [
-        {
-          "action": "open",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
-        },
-        {
-          "action": "highlight",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "59:60",
-          "highlightWholeLine": true
-        }
-      ]
-    },
-    {
-      "title": "Metacognition Code III",
-      "description": "Highlight code.",
-      "steps": [
-        {
-          "action": "open",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
-        },
-        {
-          "action": "highlight",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "46:47",
-          "highlightWholeLine": true
-        }
-      ]
-    },
-    {
       "title": "Metacognition Code IV",
       "description": "Highlight code.",
       "steps": [
@@ -313,6 +327,16 @@
           "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
           "position": "16:28",
           "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/12-metacognition.md"
         }
       ]
     },
