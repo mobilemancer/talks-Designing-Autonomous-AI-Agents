@@ -1,7 +1,5 @@
 namespace AgentsDemo.Scenarios;
 
-using System.IO;
-
 public sealed class Metagognition : ScenarioBase
 {
     public override string Name => "Metacognition";

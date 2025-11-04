@@ -341,23 +341,7 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "47:68",
-          "highlightWholeLine": true
-        }
-      ]
-    },
-    {
-      "title": "Metacognition Code I",
-      "description": "Highlight code.",
-      "steps": [
-        {
-          "action": "open",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
-        },
-        {
-          "action": "highlight",
-          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "69:84",
+          "position": "45:66",
           "highlightWholeLine": true
         }
       ]
@@ -373,7 +357,7 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "16:28",
+          "position": "16:21",
           "highlightWholeLine": true
         }
       ]
@@ -384,7 +368,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/12-metacognition.md"
+          "path": ".demo/slides/12-metacognition-evolution.md"
         }
       ]
     },
