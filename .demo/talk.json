@@ -230,16 +230,6 @@
       ]
     },
     {
-      "title": "Tool III Slide",
-      "description": "Show a slide ",
-      "steps": [
-        {
-          "action": "openSlide",
-          "path": ".demo/slides/10-tools-III.md"
-        }
-      ]
-    },
-    {
       "title": "Tool IV Slide",
       "description": "Show a slide ",
       "steps": [
@@ -278,6 +268,16 @@
           "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
           "position": "20",
           "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool III Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-tools-III.md"
         }
       ]
     },
