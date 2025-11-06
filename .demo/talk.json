@@ -55,16 +55,6 @@
       ]
     },
     {
-      "title": "Microsoft Agent Framework",
-      "description": "Show a slide and highlight a function in code.",
-      "steps": [
-        {
-          "action": "openSlide",
-          "path": ".demo/slides/6-MAF.md"
-        }
-      ]
-    },
-    {
       "title": "Foundry",
       "description": "Show a slide.",
       "steps": [
@@ -91,6 +81,26 @@
         {
           "action": "openSlide",
           "path": ".demo/slides/7.2-foundry-uri-key.md"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF.md"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF-supported-agents.md"
         }
       ]
     },

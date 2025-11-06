@@ -1,5 +1,5 @@
 ---
-theme: frost
+theme: quantum
 layout: two-columns
 transition: fadeIn
 ---

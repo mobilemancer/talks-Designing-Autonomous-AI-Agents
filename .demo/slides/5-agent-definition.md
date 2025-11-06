@@ -1,5 +1,5 @@
 ---
-theme: frost
+theme: quantum
 layout: image-right
 image: .demo/img/agent-definition.svg
 transition: fadeIn

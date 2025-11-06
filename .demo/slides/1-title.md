@@ -1,9 +1,9 @@
 ---
-theme: frost
+theme: quantum
 layout: intro
 transition: fadeIn
 ---
 
-# Building Autonomous Agents 🤖
+# Building Autonomous Agents
 
-A practical guide to building AI agents using the .NET ecosystem, and Azure services like AI Foundry.
+A guide to building AI agents in .NET, backed by Azure AI Foundry.
