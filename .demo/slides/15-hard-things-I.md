@@ -17,5 +17,4 @@ transition: fadeIn
   - Tooling confusion
   - Coercing the model to use them
 - Models
-  - One does not simply change model...
   - Mix and match for best results

@@ -4,15 +4,13 @@ layout: default
 transition: fadeIn
 ---
 
-# Microsoft Agent Framework
+# Microsoft Agent Framework (Preview Oct 2025)
 
-- New framework (Preview Oct 2025)
 - Successor to _Semantic Kernel_ and _Autogen_
-- Slightly higher abstraction than _Semantic Kernel_
 - Support for _Azure AI Foundry Agents_
+- Agent workflow management
 - Builds on open standards and interop
   - MCP
   - A2A
   - OpenAPI
   - Cloud agnostic
-- Agent workflow management

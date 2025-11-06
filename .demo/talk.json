@@ -390,7 +390,7 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
-          "position": "45:66",
+          "position": "45:62",
           "highlightWholeLine": true
         }
       ]
@@ -422,12 +422,32 @@
       ]
     },
     {
+      "title": "Workflows Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/13-workflows.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflows Details Slide ",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/13-workflows-details.md"
+        }
+      ]
+    },
+    {
       "title": "Models",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/13-good-models.md"
+          "path": ".demo/slides/14-models.md"
         }
       ]
     },
@@ -437,7 +457,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/14-hard-things-I.md"
+          "path": ".demo/slides/15-hard-things-I.md"
         }
       ]
     },

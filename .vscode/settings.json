@@ -2,5 +2,6 @@
     "demoTime.defaultFileType": "json",
     "workbench.editor.showTabs": "multiple",
     "workbench.activityBar.location": "default",
-    "workbench.statusBar.visible": true
+    "workbench.statusBar.visible": true,
+    "demoTime.previousEnabled": true
 }

@@ -21,8 +21,8 @@ public sealed class Metagognition : ScenarioBase
                 ",
                 tools:
                 [
-                    AIFunctionFactory.Create(get_user_preferences),
-                    AIFunctionFactory.Create(save_user_preferences),
+                    AIFunctionFactory.Create(GetUserPreferences),
+                    AIFunctionFactory.Create(SaveUserPreferences),
                     SearchTool().AsAIFunction(),
                 ]
             );
@@ -43,10 +43,8 @@ public sealed class Metagognition : ScenarioBase
     }
 
     [Description("Get the users preferences.")]
-    static string get_user_preferences()
+    static string GetUserPreferences()
     {
-        Console.WriteLine($"Getting user preferences");
-
         string path = Path.Combine(".data", "preferences.md");
         if (File.Exists(path))
         {
@@ -56,10 +54,8 @@ public sealed class Metagognition : ScenarioBase
     }
 
     [Description("Save the users preferences.")]
-    static string save_user_preferences(string preferences)
+    static string SaveUserPreferences(string preferences)
     {
-        Console.WriteLine($"Saving user preferences");
-
         Directory.CreateDirectory(".data");
         File.WriteAllText(Path.Combine(".data", "preferences.md"), preferences);
         return "Preferences saved.";
