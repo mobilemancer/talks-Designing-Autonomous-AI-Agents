@@ -11,6 +11,7 @@ var scenarios = new IScenario[]
     new MCPTools(),
     new Metagognition(),
     new Middleware(),
+    new CFPWorkflow()
 };
 
 var runner = new ScenarioRunner(scenarios);

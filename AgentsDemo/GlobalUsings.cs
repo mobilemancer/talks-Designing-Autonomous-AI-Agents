@@ -11,3 +11,4 @@ global using Microsoft.Agents.AI;
 global using Microsoft.Extensions.AI;
 global using ModelContextProtocol.Client;
 global using OpenAI;
+global using Microsoft.Agents.AI.Workflows;
