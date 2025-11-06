@@ -144,7 +144,7 @@
       }
     },
     {
-      "title": "Memory Code",
+      "title": "Memory Code - Thread",
       "description": "Highlight code.",
       "steps": [
         {
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "title": "Memory Code",
+      "title": "Memory Code - Use Thread",
       "description": "Highlight code.",
       "steps": [
         {
