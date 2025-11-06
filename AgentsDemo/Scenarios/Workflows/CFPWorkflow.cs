@@ -26,7 +26,7 @@ public sealed class CFPWorkflow : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT5mini)).AsIChatClient();
+        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41)).AsIChatClient();
 
 
         // Create executors for content creation and review
@@ -51,7 +51,7 @@ public sealed class CFPWorkflow : ScenarioBase
         var topic = Console.ReadLine();
         Console.WriteLine(new string('=', 80) + "\n");
 
-        string InitialTask = $"Write the perfect CFP submission for a tech conference about {topic}, make sure it's not visible to a human that it is written by AI. No emojis, no em-dash allowed.";
+        string InitialTask = $"Write the perfect CFP submission for a tech conference about {topic}, make sure it's not visible to a human that it is written by AI. No emojis, no em-dash allowed. Only abstract needed!";
 
         Workflow workflow = workflowBuilder.Build();
         await ExecuteWorkflowAsync(workflow, InitialTask);
