@@ -76,11 +76,21 @@
     },
     {
       "title": "Foundry Models",
-      "description": "Show a slide.",
+      "description": "Show an image.",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/7.1-foundry-models.md"
+        }
+      ]
+    },
+    {
+      "title": "Foundry URI",
+      "description": "Show an image.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/7.2-foundry-uri-key.md"
         }
       ]
     },
