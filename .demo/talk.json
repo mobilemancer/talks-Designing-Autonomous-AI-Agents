@@ -66,7 +66,7 @@
     },
     {
       "title": "Foundry",
-      "description": "Show a slide and highlight a function in code.",
+      "description": "Show a slide.",
       "steps": [
         {
           "action": "openSlide",
@@ -75,8 +75,18 @@
       ]
     },
     {
+      "title": "Foundry Models",
+      "description": "Show a slide.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/7.1-foundry-models.md"
+        }
+      ]
+    },
+    {
       "title": "Constructing an Agent",
-      "description": "Show a slide and highlight a function in code.",
+      "description": "Show a slide.",
       "steps": [
         {
           "action": "openSlide",
