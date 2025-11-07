@@ -1,7 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
-using System.Text.Json.Serialization;
-
 namespace AgentsDemo.Scenarios;
 
 public sealed class CFPWorkflow : ScenarioBase
@@ -51,7 +47,10 @@ public sealed class CFPWorkflow : ScenarioBase
         var topic = Console.ReadLine();
         Console.WriteLine(new string('=', 80) + "\n");
 
-        string InitialTask = $"Write the perfect CFP submission for a tech conference about {topic}, make sure it's not visible to a human that it is written by AI. No emojis, no em-dash allowed. Only abstract needed!";
+        string InitialTask =
+        @$"Write the perfect CFP submission for a tech conference about {topic}, 
+        make sure it's not visible to a human that it is written by AI. 
+        No emojis, no em-dash allowed. Only abstract needed!";
 
         Workflow workflow = workflowBuilder.Build();
         await ExecuteWorkflowAsync(workflow, InitialTask);

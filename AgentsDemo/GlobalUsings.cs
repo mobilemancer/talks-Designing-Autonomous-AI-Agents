@@ -12,3 +12,6 @@ global using Microsoft.Extensions.AI;
 global using ModelContextProtocol.Client;
 global using OpenAI;
 global using Microsoft.Agents.AI.Workflows;
+global using System.Diagnostics.CodeAnalysis;
+global using System.Text;
+global using System.Text.Json.Serialization;

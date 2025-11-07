@@ -1,5 +1,7 @@
 ---
+theme: quantum
 layout: default
+transition: fadeIn
 ---
 
 # Workflow Details
