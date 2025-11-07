@@ -1,0 +1,487 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "Designing Autonomous AI Agents",
+  "version": 2,
+  "demos": [
+    {
+      "title": "Title slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/1-title.md"
+        }
+      ]
+    },
+    {
+      "title": "Presenter intro",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/2-presenter.md"
+        }
+      ]
+    },
+    {
+      "title": "Agenda slide",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/3-agenda.md"
+        }
+      ],
+      "disabled": true
+    },
+    {
+      "title": "Year of agents slide",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/4-year-of-agents.md"
+        }
+      ]
+    },
+    {
+      "title": "Agent definition",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/5-agent-definition.md"
+        }
+      ]
+    },
+    {
+      "title": "Foundry",
+      "description": "Show a slide.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/7-foundry.md"
+        }
+      ]
+    },
+    {
+      "title": "Foundry Models",
+      "description": "Show an image.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/7.1-foundry-models.md"
+        }
+      ]
+    },
+    {
+      "title": "Foundry URI",
+      "description": "Show an image.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/7.2-foundry-uri-key.md"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF.md"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework",
+      "description": "Show a slide and highlight a function in code.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF-supported-agents.md"
+        }
+      ]
+    },
+    {
+      "title": "Constructing an Agent",
+      "description": "Show a slide.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/8-build-agent.md"
+        }
+      ]
+    },
+    {
+      "title": "Constructing an Agent - Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/SimpleChat.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/SimpleChat.cs",
+          "position": "9:17",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Memory Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/9-memory.md"
+        }
+      ],
+      "notes": {
+        "path": ".demo/slides/9-memory-notes.md"
+      }
+    },
+    {
+      "title": "Memory Code - Thread",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
+          "position": "19",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Memory Code - Use Thread",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
+          "position": "23",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool I Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-tools-I.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool I Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs",
+          "position": "28:35",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool I Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/SimpleTool.cs",
+          "position": "17",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool II Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-tools-II.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool II Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs",
+          "position": "9:18",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool II Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/AgentAsTool.cs",
+          "position": "28",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool IV Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-tools-IV.md"
+        }
+      ]
+    },
+    {
+      "title": "Tool IV Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
+          "position": "30:55",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool IV Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
+          "position": "20",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tool III Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-tools-III.md"
+        }
+      ]
+    },
+    {
+      "title": "Middleware Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/11-middleware.md"
+        }
+      ]
+    },
+    {
+      "title": "Middleware Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
+          "position": "31:45",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Middleware Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
+          "position": "47:59",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Middleware Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
+          "position": "20:24",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/12-metacognition.md"
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Code",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "45:62",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Code IV",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Metacognition/Metacognition.cs",
+          "position": "16:21",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/12-metacognition-evolution.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflows Slide",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/13-workflows.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflows Details Slide ",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/13-workflows-details.md"
+        }
+      ]
+    },
+    {
+      "title": "Models",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/14-models.md"
+        }
+      ]
+    },
+    {
+      "title": "Hard Things",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/15-hard-things-I.md"
+        }
+      ]
+    },
+    {
+      "title": "Hard Things II",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "imagePreview",
+          "path": ".demo/img/one-does-not.png"
+        }
+      ]
+    },
+    {
+      "title": "The end",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/the-end.md"
+        }
+      ]
+    }
+  ],
+  "description": "How to build autonomous agents with Microsoft Agent Framework and Azure Foundry",
+  "timer": 40
+}
