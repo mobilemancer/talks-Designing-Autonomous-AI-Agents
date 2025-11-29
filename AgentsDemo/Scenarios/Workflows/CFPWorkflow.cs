@@ -8,8 +8,9 @@ public sealed class CFPWorkflow : ScenarioBase
     protected override async Task ExecuteAsync()
     {
 
-        Console.WriteLine("\n=== Writer-Critic Iteration Workflow ===\n");
-        Console.WriteLine($"Writer and Critic will iterate up to {MaxIterations} times until approval.\n");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine($"~~ The Writer & Critic duo are ready to collaborate! (Up to {MaxIterations} rounds of friendly debate) ~~");
+        Console.ResetColor();
 
         // Set up the Azure OpenAI client
         IChatClient chatClient = new AzureOpenAIClient(
@@ -22,7 +23,7 @@ public sealed class CFPWorkflow : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41)).AsIChatClient();
+        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT51)).AsIChatClient();
 
 
         // Create executors for content creation and review
@@ -41,33 +42,45 @@ public sealed class CFPWorkflow : ScenarioBase
         // Execute the workflow with a sample task
         // The workflow loops back to Writer if content is rejected,
         // or proceeds to Summary if approved. State tracking ensures we don't loop forever.
-        Console.WriteLine(new string('=', 80));
-        Console.WriteLine("TASK: Write the perfect CFP about a topic, make sure it's not visible to a human that it is written by AI.");
-        Console.Write("Topic: ");
-        var topic = Console.ReadLine();
-        Console.WriteLine(new string('=', 80) + "\n");
+        string? topic = AskUserForTopic();
 
         string InitialTask =
-        @$"Write the perfect CFP submission for a tech conference about {topic}, 
-        make sure it's not visible to a human that it is written by AI. 
-        No emojis, no em-dash allowed. Only abstract needed!";
+        @$"Write the perfect CFP submission for a tech conference about {topic}. 
+         Only the abstract is needed!";
 
         Workflow workflow = workflowBuilder.Build();
         await ExecuteWorkflowAsync(workflow, InitialTask);
 
-        Console.WriteLine("\n✅ Sample Complete: Writer-Critic iteration demonstrates conditional workflow loops\n");
-        Console.WriteLine("Key Concepts Demonstrated:");
-        Console.WriteLine("  ✓ Iterative refinement loop with conditional routing");
-        Console.WriteLine("  ✓ Shared workflow state for iteration tracking");
-        Console.WriteLine($"  ✓ Max iteration cap ({MaxIterations}) for safety");
-        Console.WriteLine("  ✓ Multiple message handlers in a single executor");
-        Console.WriteLine("  ✓ Streaming support with structured output\n");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n[Done] Mission accomplished! The Writer-Critic workflow has spoken.\n");
+        Console.ResetColor();
+        Console.WriteLine("What you just witnessed:");
+        Console.WriteLine("   * Iterative refinement with conditional routing");
+        Console.WriteLine("   * Shared workflow state for iteration tracking");
+        Console.WriteLine($"   * Safety cap of {MaxIterations} iterations (no infinite loops here!)");
+        Console.WriteLine("   * Real-time streaming with structured output\n");
+    }
+
+    private static string? AskUserForTopic()
+    {
+        Console.WriteLine();
+        Console.WriteLine(new string('-', 80));
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(">> MISSION: Craft a conference-worthy CFP that sounds authentically human!");
+        Console.ResetColor();
+        Console.WriteLine(new string('-', 80));
+        Console.Write("\n   What topic shall we write about? ");
+        var topic = Console.ReadLine();
+        Console.WriteLine();
+        return topic;
     }
 
     private static async Task ExecuteWorkflowAsync(Workflow workflow, string input)
     {
         // Execute in streaming mode to see real-time progress
         await using StreamingRun run = await InProcessExecution.StreamAsync<string>(workflow, input);
+
+        bool hasShownFinalOutput = false;
 
         // Watch the workflow events
         await foreach (WorkflowEvent evt in run.WatchStreamAsync())
@@ -83,15 +96,21 @@ public sealed class CFPWorkflow : ScenarioBase
                     break;
 
                 case WorkflowOutputEvent output:
-                    Console.WriteLine("\n\n" + new string('=', 80));
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("✅ FINAL APPROVED CONTENT");
-                    Console.ResetColor();
-                    Console.WriteLine(new string('=', 80));
-                    Console.WriteLine();
-                    Console.WriteLine(output.Data);
-                    Console.WriteLine();
-                    Console.WriteLine(new string('=', 80));
+                    if (!hasShownFinalOutput)
+                    {
+                        hasShownFinalOutput = true;
+                        Console.WriteLine("\n\n" + new string('=', 80));
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("<< THE CRITIC HAS APPROVED! Here's your polished CFP >>");
+                        Console.ResetColor();
+                        Console.WriteLine(new string('=', 80));
+                        Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(output.Data);
+                        Console.ResetColor();
+                        Console.WriteLine();
+                        Console.WriteLine(new string('=', 80));
+                    }
                     break;
             }
         }
@@ -178,7 +197,7 @@ internal sealed class WriterExecutor : Executor
 
     public WriterExecutor(IChatClient chatClient) : base("Writer")
     {
-        this._agent = new ChatClientAgent(
+        _agent = new ChatClientAgent(
             chatClient,
             name: "Writer",
             instructions: """
@@ -191,8 +210,8 @@ internal sealed class WriterExecutor : Executor
 
     protected override RouteBuilder ConfigureRoutes(RouteBuilder routeBuilder) =>
         routeBuilder
-            .AddHandler<string, ChatMessage>(this.HandleInitialRequestAsync)
-            .AddHandler<CriticDecision, ChatMessage>(this.HandleRevisionRequestAsync);
+            .AddHandler<string, ChatMessage>(HandleInitialRequestAsync)
+            .AddHandler<CriticDecision, ChatMessage>(HandleRevisionRequestAsync);
 
     /// <summary>
     /// Handles the initial writing request from the user.
@@ -202,7 +221,7 @@ internal sealed class WriterExecutor : Executor
         IWorkflowContext context,
         CancellationToken cancellationToken = default)
     {
-        return await this.HandleAsyncCoreAsync(new ChatMessage(ChatRole.User, message), context, cancellationToken);
+        return await HandleAsyncCoreAsync(new ChatMessage(ChatRole.User, message), context, cancellationToken);
     }
 
     /// <summary>
@@ -217,7 +236,7 @@ internal sealed class WriterExecutor : Executor
                        $"Feedback: {decision.Feedback}\n\n" +
                        $"Original Content:\n{decision.Content}";
 
-        return await this.HandleAsyncCoreAsync(new ChatMessage(ChatRole.User, prompt), context, cancellationToken);
+        return await HandleAsyncCoreAsync(new ChatMessage(ChatRole.User, prompt), context, cancellationToken);
     }
 
     /// <summary>
@@ -233,7 +252,7 @@ internal sealed class WriterExecutor : Executor
         Console.WriteLine($"\n=== Writer (Iteration {state.Iteration}) ===\n");
 
         StringBuilder sb = new();
-        await foreach (AgentRunResponseUpdate update in this._agent.RunStreamingAsync(message, cancellationToken: cancellationToken))
+        await foreach (AgentRunResponseUpdate update in _agent.RunStreamingAsync(message, cancellationToken: cancellationToken))
         {
             if (!string.IsNullOrEmpty(update.Text))
             {
@@ -261,13 +280,15 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
 
     public CriticExecutor(IChatClient chatClient) : base("Critic")
     {
-        this._agent = new ChatClientAgent(chatClient, new ChatClientAgentOptions
+        _agent = new ChatClientAgent(chatClient, new ChatClientAgentOptions
         {
             Name = "Critic",
             Instructions = """
                 You are a constructive critic. Review the content and provide specific feedback.
                 Always try to provide actionable suggestions for improvement and strive to identify improvement points.
                 Only approve if the content is high quality, clear, and meets the original requirements and you see no improvement points.
+                make sure it's not visible to a human that it is written by AI. 
+                No emojis allowed, no em-dash allowed.
                 
                 Provide your decision as structured output with:
                 - approved: true if content is good, false if revisions needed
@@ -289,10 +310,11 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
     {
         FlowState state = await FlowStateHelpers.ReadFlowStateAsync(context);
 
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine($"=== Critic (Iteration {state.Iteration}) ===\n");
 
         // Use RunStreamingAsync to get streaming updates, then deserialize at the end
-        IAsyncEnumerable<AgentRunResponseUpdate> updates = this._agent.RunStreamingAsync(message, cancellationToken: cancellationToken);
+        IAsyncEnumerable<AgentRunResponseUpdate> updates = _agent.RunStreamingAsync(message, cancellationToken: cancellationToken);
 
         // Stream the output in real-time (for any rationale/explanation)
         await foreach (AgentRunResponseUpdate update in updates)
@@ -303,12 +325,13 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
             }
         }
         Console.WriteLine("\n");
+        Console.ResetColor();
 
         // Convert the stream to a response and deserialize the structured output
         AgentRunResponse response = await updates.ToAgentRunResponseAsync(cancellationToken);
         CriticDecision decision = response.Deserialize<CriticDecision>(JsonSerializerOptions.Web);
 
-        Console.WriteLine($"Decision: {(decision.Approved ? "✅ APPROVED" : "❌ NEEDS REVISION")}");
+        Console.WriteLine($"Decision: {(decision.Approved ? "[OK] APPROVED" : "[X] NEEDS REVISION")}");
         if (!string.IsNullOrEmpty(decision.Feedback))
         {
             Console.WriteLine($"Feedback: {decision.Feedback}");
@@ -319,7 +342,7 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
         if (!decision.Approved && state.Iteration >= CFPWorkflow.MaxIterations)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"⚠️ Max iterations ({CFPWorkflow.MaxIterations}) reached - auto-approving");
+            Console.WriteLine($"! Max iterations ({CFPWorkflow.MaxIterations}) reached - auto-approving");
             Console.ResetColor();
             decision.Approved = true;
             decision.Feedback = "";
@@ -345,43 +368,20 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
 }
 
 /// <summary>
-/// Executor that presents the final approved content to the user.
+/// Executor that yields the final approved content as workflow output.
 /// </summary>
 internal sealed class SummaryExecutor : Executor<CriticDecision, ChatMessage>
 {
-    private readonly AIAgent _agent;
-
-    public SummaryExecutor(IChatClient chatClient) : base("Summary")
-    {
-        this._agent = new ChatClientAgent(
-            chatClient,
-            name: "Summary",
-            instructions: """
-                You present the final approved content to the user.
-                Simply output the polished content - no additional commentary needed.
-                """
-        );
-    }
+    public SummaryExecutor(IChatClient _) : base("Summary") { }
 
     public override async ValueTask<ChatMessage> HandleAsync(
         CriticDecision message,
         IWorkflowContext context,
         CancellationToken cancellationToken = default)
     {
-        Console.WriteLine("=== Summary ===\n");
-
-        string prompt = $"Present this approved content:\n\n{message.Content}";
-
-        StringBuilder sb = new();
-        await foreach (AgentRunResponseUpdate update in this._agent.RunStreamingAsync(new ChatMessage(ChatRole.User, prompt), cancellationToken: cancellationToken))
-        {
-            if (!string.IsNullOrEmpty(update.Text))
-            {
-                sb.Append(update.Text);
-            }
-        }
-
-        ChatMessage result = new(ChatRole.Assistant, sb.ToString());
+        // Simply pass through the approved content - no need to call the agent again
+        // The content was already polished by Writer and approved by Critic
+        ChatMessage result = new(ChatRole.Assistant, message.Content);
         await context.YieldOutputAsync(result, cancellationToken);
         return result;
     }
