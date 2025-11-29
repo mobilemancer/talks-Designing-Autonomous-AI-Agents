@@ -3,5 +3,6 @@
     "workbench.editor.showTabs": "multiple",
     "workbench.activityBar.location": "default",
     "workbench.statusBar.visible": true,
-    "demoTime.previousEnabled": true
+    "demoTime.previousEnabled": true,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never"
 }
