@@ -12,6 +12,7 @@ var scenarios = new IScenario[]
     new Metagognition(),
     new Middleware(),
     new CFPWorkflow(),
+    new FoundryAgent(),
     new FoundryWorkflow()
 };
 
