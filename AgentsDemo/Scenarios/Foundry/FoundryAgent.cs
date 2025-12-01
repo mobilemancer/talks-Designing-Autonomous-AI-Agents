@@ -10,7 +10,7 @@ public sealed class FoundryAgent : ScenarioBase
 
 
     const string projectEndpoint = "https://autonomous-agents.services.ai.azure.com/api/projects/firstProject";
-    const string agentName = "abstract-producer";
+    const string agentName = "abstract-writer";
 
     protected override async Task ExecuteDemoAsync()
     {
