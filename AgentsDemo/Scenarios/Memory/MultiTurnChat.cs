@@ -27,9 +27,5 @@ public sealed class MultiTurnChat : ScenarioBase
         Console.WriteLine(prompt);
         response = await agent.RunAsync(prompt, thread);
         Console.WriteLine(response);
-
-        // Console.WriteLine("---");
-        // Console.WriteLine("Thread as JSON:");
-        // Console.WriteLine(thread.Serialize(JsonSerializerOptions.Web));
     }
 }
