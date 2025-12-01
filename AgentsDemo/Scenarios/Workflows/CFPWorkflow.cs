@@ -5,7 +5,7 @@ public sealed class CFPWorkflow : ScenarioBase
     public override string Name => "Workflow producing CFPs";
     public const int MaxIterations = 3;
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
 
         Console.ForegroundColor = ConsoleColor.Cyan;

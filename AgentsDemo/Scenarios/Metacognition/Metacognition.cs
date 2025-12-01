@@ -4,7 +4,7 @@ public sealed class Metagognition : ScenarioBase
 {
     public override string Name => "Metacognition";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),

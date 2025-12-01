@@ -20,7 +20,7 @@ public abstract class ScenarioBase : IScenario
         Console.WriteLine($"\n~== {Name} ==~\n");
         Console.ForegroundColor = ConsoleColor.White;
 
-        await ExecuteAsync().ConfigureAwait(false);
+        await ExecuteDemoAsync().ConfigureAwait(false);
 
         stopwatch.Stop();
 
@@ -29,5 +29,5 @@ public abstract class ScenarioBase : IScenario
         Console.ForegroundColor = ConsoleColor.White;
     }
 
-    protected abstract Task ExecuteAsync();
+    protected abstract Task ExecuteDemoAsync();
 }

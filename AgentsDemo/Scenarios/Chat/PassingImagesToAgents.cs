@@ -4,7 +4,7 @@ public sealed class PassingImagesToAgents : ScenarioBase
 {
     public override string Name => "Passing images to agents";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),

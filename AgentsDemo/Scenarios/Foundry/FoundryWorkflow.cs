@@ -12,7 +12,7 @@ public sealed class FoundryWorkflow : ScenarioBase
     const string projectEndpoint = "https://autonomous-agents.services.ai.azure.com/api/projects/firstProject";
     const string agentName = "abstract-producer";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         // Connect to your project using the endpoint from your project page
         AIProjectClient projectClient = new(endpoint: new Uri(projectEndpoint), tokenProvider: new DefaultAzureCredential(includeInteractiveCredentials: true));

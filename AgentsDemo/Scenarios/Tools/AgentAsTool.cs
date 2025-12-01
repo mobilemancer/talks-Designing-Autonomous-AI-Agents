@@ -4,7 +4,7 @@ public sealed class AgentAsTool : ScenarioBase
 {
     public override string Name => "Agent as Tool";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent weatherAgent = new AzureOpenAIClient(
             new Uri(endpoint),

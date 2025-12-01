@@ -4,7 +4,7 @@ public sealed class SimpleTool : ScenarioBase
 {
     public override string Name => "Simple tool calling";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),
