@@ -46,3 +46,4 @@ layout: default
 - DeepSeek
 - Cohere
 - Flux
+- *Anthropic* (Opus 4.5, Sonnet 4.5, Haiku 4.5)
