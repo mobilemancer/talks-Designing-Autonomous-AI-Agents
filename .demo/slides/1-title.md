@@ -6,4 +6,4 @@ transition: fadeIn
 
 # Building Autonomous Agents
 
-A guide to building AI agents in .NET, backed by Azure AI Foundry.
+A guide to building AI agents in .NET, backed by Microsoft Foundry.

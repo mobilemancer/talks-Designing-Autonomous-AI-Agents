@@ -4,7 +4,7 @@ layout: default
 transition: fadeIn
 ---
 
-# Built in Tools in Azure Foundry
+# Built in Tools in Microsoft Foundry
 
 | Tool Name                                 | Description                                                                                                           |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|

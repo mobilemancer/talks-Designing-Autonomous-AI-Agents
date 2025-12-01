@@ -37,7 +37,7 @@ LLM Leaderboard (https://llm-stats.com/benchmarks)
 layout: default
 ---
 
-# Available in Azure Foundry
+# Available in Microsoft Foundry
 
 - Open AI models (GPT-5, GPT-4, o-series, etc)
 - X-AI (Grok-4, Grok-3, Grok-code-fast)

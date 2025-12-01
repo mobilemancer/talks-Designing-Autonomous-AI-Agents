@@ -13,7 +13,7 @@ transition: fadeIn
 
 3. Microsoft Agent Framework – Core architecture
 
-4. Azure AI Foundry – Model and Agent
+4. Microsoft Foundry – Model and Agent
 
 5. Memory & Tools – Enhancing agents with memory and tool use
 
