@@ -13,8 +13,8 @@ transition: fadeIn
 
 - Implement a `ChatMessageStore`
 
-### Long term memory
+### Long term memory 🐉
 
 - Reduction
 - Summarization
-- Weight
+- Weight (Contextual, Temporal)

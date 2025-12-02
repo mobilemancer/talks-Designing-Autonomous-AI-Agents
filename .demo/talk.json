@@ -86,7 +86,7 @@
     },
     {
       "title": "Microsoft Agent Framework",
-      "description": "Show a slide and highlight a function in code.",
+      "description": "Show a slide",
       "steps": [
         {
           "action": "openSlide",
@@ -96,11 +96,21 @@
     },
     {
       "title": "Microsoft Agent Framework",
-      "description": "Show a slide and highlight a function in code.",
+      "description": "Show a slide",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/6-MAF-supported-agents.md"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF-supported-agents-II.md"
         }
       ]
     },
@@ -120,11 +130,11 @@
       "steps": [
         {
           "action": "open",
-          "path": "AgentsDemo/Scenarios/SimpleChat.cs"
+          "path": "AgentsDemo/Scenarios/Chat/SimpleChat.cs"
         },
         {
           "action": "highlight",
-          "path": "AgentsDemo/Scenarios/SimpleChat.cs",
+          "path": "AgentsDemo/Scenarios/chat/SimpleChat.cs",
           "position": "9:17",
           "highlightWholeLine": true
         }
@@ -170,13 +180,13 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
-          "position": "23",
+          "position": "21:29",
           "highlightWholeLine": true
         }
       ]
     },
     {
-      "title": "Tool I Slide",
+      "title": "Functions as Tools Slide",
       "description": "Show a slide ",
       "steps": [
         {
@@ -186,7 +196,7 @@
       ]
     },
     {
-      "title": "Tool I Code",
+      "title": "Functions as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -202,7 +212,7 @@
       ]
     },
     {
-      "title": "Tool I Code",
+      "title": "Functions as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -218,7 +228,7 @@
       ]
     },
     {
-      "title": "Tool II Slide",
+      "title": "Agents as Tools Slide",
       "description": "Show a slide ",
       "steps": [
         {
@@ -228,7 +238,7 @@
       ]
     },
     {
-      "title": "Tool II Code",
+      "title": "Agents as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -244,7 +254,7 @@
       ]
     },
     {
-      "title": "Tool II Code",
+      "title": "Agents as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -260,17 +270,17 @@
       ]
     },
     {
-      "title": "Tool IV Slide",
+      "title": "MCP Tools Slide",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/10-tools-IV.md"
+          "path": ".demo/slides/10-tools-V.md"
         }
       ]
     },
     {
-      "title": "Tool IV Code",
+      "title": "MCP Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -286,7 +296,7 @@
       ]
     },
     {
-      "title": "Tool IV Code",
+      "title": "MCP Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -302,12 +312,22 @@
       ]
     },
     {
-      "title": "Tool III Slide",
+      "title": "Tools in Foundry Slide",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/10-tools-III.md"
+        }
+      ]
+    },
+    {
+      "title": "Tools in Foundry Slide 2",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-tools-IV.md"
         }
       ]
     },
