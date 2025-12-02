@@ -55,6 +55,16 @@
       ]
     },
     {
+      "title": "Foundry Section",
+      "description": "Show a slide.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/foundry-section.md"
+        }
+      ]
+    },
+    {
       "title": "Foundry",
       "description": "Show a slide.",
       "steps": [
@@ -81,6 +91,16 @@
         {
           "action": "openSlide",
           "path": ".demo/slides/7.2-foundry-uri-key.md"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework Section",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF-section.md"
         }
       ]
     },
@@ -141,6 +161,16 @@
       ]
     },
     {
+      "title": "Memory Section",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/memory-section.md"
+        }
+      ]
+    },
+    {
       "title": "Memory Slide",
       "description": "Show a slide ",
       "steps": [
@@ -182,6 +212,16 @@
           "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
           "position": "21:29",
           "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Tools Section",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/tools-section.md"
         }
       ]
     },
@@ -332,6 +372,16 @@
       ]
     },
     {
+      "title": "Middleware Section",
+      "description": "Show a section slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/middleware-section.md"
+        }
+      ]
+    },
+    {
       "title": "Middleware Slide",
       "description": "Show a slide ",
       "steps": [
@@ -390,6 +440,16 @@
       ]
     },
     {
+      "title": "Metacognition Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/metacognition-section.md"
+        }
+      ]
+    },
+    {
       "title": "Metacognition Slide",
       "description": "Show a slide ",
       "steps": [
@@ -438,6 +498,16 @@
         {
           "action": "openSlide",
           "path": ".demo/slides/12-metacognition-evolution.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflows Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/workflows-section.md"
         }
       ]
     },

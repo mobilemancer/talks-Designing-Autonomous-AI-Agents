@@ -12,6 +12,6 @@ transition: fadeIn
 
 ::right::
 
-## GH Repo - Slides + Demo  
+## Github 👉 Slides & Demo  
 
 <img width="70%" src=".demo/img/gh-repo-qr.png" alt="Repo">
