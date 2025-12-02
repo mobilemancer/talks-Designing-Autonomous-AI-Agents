@@ -488,8 +488,82 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
-          "position": "192:207",
+          "position": "191:206",
           "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "208:211",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "216:222",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "163:181",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "227:237",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Demo Section",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/demo-section.md"
         }
       ]
     },

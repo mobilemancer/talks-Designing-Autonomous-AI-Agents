@@ -6,7 +6,7 @@ transition: fadeIn
 
 # Workflow
 
-- Build complex workflows
+- Building complex workflows
   - Agents
   - Other integrations
   - Human interactions

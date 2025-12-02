@@ -8,13 +8,13 @@ transition: fadeIn
 
 ## Logic
 
-- GPT-5
+- GPT-5, Opus 4.5
+- Gemini 3
 - Grok-4
-- Gemini-2.5
 
 ## Tool calling
 
-- Claude Opus, Sonnet
+- Opus, Sonnet
 - Google Gemini, Flash
 - Grok 4
 - GPT-5
@@ -40,10 +40,10 @@ layout: default
 # Available in Microsoft Foundry
 
 - Open AI models (GPT-5, GPT-4, o-series, etc)
+- *Anthropic* (Opus 4.5, Sonnet 4.5, Haiku 4.5)
 - X-AI (Grok-4, Grok-3, Grok-code-fast)
 - MSFT Phi-series
 - Mistral
 - DeepSeek
 - Cohere
 - Flux
-- *Anthropic* (Opus 4.5, Sonnet 4.5, Haiku 4.5)

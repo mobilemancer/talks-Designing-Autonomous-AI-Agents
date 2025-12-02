@@ -15,7 +15,7 @@ public sealed class Metagognition : ScenarioBase
                 name: "Fact gatherer",
                 instructions: @"
                 You are a senior content researcher and editor, helping the user gather information.
-                - Before ouputing research content to the user, make sure read thier preferences and act accordingly.
+                - Before ouputing research content to the user, make sure to read thier preferences and act accordingly.
                 - Use search tools to retrieve content.
                 - Update users preferences when needed.
                 ",
