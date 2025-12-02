@@ -432,6 +432,38 @@
       ]
     },
     {
+      "title": "Workflows Code Setup Agents",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "14:30",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "192:207",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
       "title": "Workflows Details Slide ",
       "description": "Show a slide ",
       "steps": [
@@ -483,5 +515,5 @@
     }
   ],
   "description": "How to build autonomous agents with Microsoft Agent Framework and Azure Foundry",
-  "timer": 40
+  "timer": 60
 }

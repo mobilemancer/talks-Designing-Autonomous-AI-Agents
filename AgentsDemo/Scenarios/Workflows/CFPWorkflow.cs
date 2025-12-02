@@ -7,7 +7,6 @@ public sealed class CFPWorkflow : ScenarioBase
 
     protected override async Task ExecuteDemoAsync()
     {
-
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine($"~~ The Writer & Critic duo are ready to collaborate! (Up to {MaxIterations} rounds of friendly debate) ~~");
         Console.ResetColor();
@@ -23,8 +22,7 @@ public sealed class CFPWorkflow : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT51)).AsIChatClient();
-
+        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41)).AsIChatClient();
 
         // Create executors for content creation and review
         WriterExecutor writer = new(chatClient);
