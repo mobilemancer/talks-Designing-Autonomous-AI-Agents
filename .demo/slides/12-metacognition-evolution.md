@@ -11,4 +11,4 @@ transition: fadeIn
   - Modification of context
     - Tools / Functions
 
-## How hard can it be?...
+## How hard can it be?
