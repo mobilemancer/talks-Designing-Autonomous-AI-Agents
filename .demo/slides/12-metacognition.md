@@ -9,6 +9,10 @@ transition: fadeIn
 - Recall
   - Memory
   - Function / Tool
-  - Scratchpad
+    - Scratchpad
 - Reflect
+  - Use agents to revise performance
 - Adapt
+  - Persist knowledge to alter future performance
+  - Modify context
+  - Alter memory

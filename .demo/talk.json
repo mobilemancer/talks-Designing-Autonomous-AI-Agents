@@ -342,7 +342,7 @@
       ]
     },
     {
-      "title": "Middleware Code",
+      "title": "Middleware AgentRun Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -358,7 +358,7 @@
       ]
     },
     {
-      "title": "Middleware Code",
+      "title": "Middleware FunctionCalling Code",
       "description": "Highlight code.",
       "steps": [
         {
