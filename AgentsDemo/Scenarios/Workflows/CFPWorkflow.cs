@@ -22,7 +22,7 @@ public sealed class CFPWorkflow : ScenarioBase
             new Uri(endpoint),
             new System.ClientModel.ApiKeyCredential(apiKey)
         )
-        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT41)).AsIChatClient();
+        .GetChatClient(ModelHelper.GetDeploymentName(Model.GPT5mini)).AsIChatClient();
 
         // Create executors for content creation and review
         WriterExecutor writer = new(chatClient);
@@ -33,6 +33,7 @@ public sealed class CFPWorkflow : ScenarioBase
         WorkflowBuilder workflowBuilder = new WorkflowBuilder(writer)
             .AddEdge(writer, critic)
             .AddSwitch(critic, sw => sw
+                .AddCase<CriticDecision>(cd => cd?.Iteration > MaxIterations, summary)
                 .AddCase<CriticDecision>(cd => cd?.Approved == true, summary)
                 .AddCase<CriticDecision>(cd => cd?.Approved == false, writer))
             .WithOutputFrom(summary);
@@ -321,14 +322,6 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
         if (!string.IsNullOrEmpty(decision.Feedback))
         {
             Console.WriteLine($"Feedback: {decision.Feedback}");
-        }
-
-        // Safety: approve if max iterations reached
-        if (!decision.Approved && state.Iteration >= CFPWorkflow.MaxIterations)
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"\n! Max iterations ({CFPWorkflow.MaxIterations}) reached - auto-approving");
-            decision.Approved = true;
         }
         Console.ResetColor();
 
