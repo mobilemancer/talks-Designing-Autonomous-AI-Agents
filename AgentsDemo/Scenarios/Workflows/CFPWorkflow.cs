@@ -38,7 +38,6 @@ public sealed class CFPWorkflow : ScenarioBase
                 .AddCase<CriticDecision>(cd => cd?.Approved == false, writer))
             .WithOutputFrom(summary);
 
-        // Execute the workflow with a sample task
         // The workflow loops back to Writer if content is rejected,
         // or proceeds to Summary if approved. State tracking ensures we don't loop forever.
         string? topic = AskUserForTopic();
@@ -356,9 +355,7 @@ internal sealed class SummaryExecutor : Executor<CriticDecision, ChatMessage>
         IWorkflowContext context,
         CancellationToken cancellationToken = default)
     {
-        // Simply pass through the approved content - no need to call the agent again
-        // The content was already polished by Writer and approved by Critic
-        ChatMessage result = new(ChatRole.Assistant, message.Content);
+        ChatMessage result = new(ChatRole.Assistant, message.Approved ? "" : "The critic never approved, iteration max hit! :(\n\n" + message.Content);
         await context.YieldOutputAsync(result, cancellationToken);
         return result;
     }
