@@ -638,12 +638,32 @@
       ]
     },
     {
+      "title": "Models Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/models-section.md"
+        }
+      ]
+    },
+    {
       "title": "Models",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/14-models.md"
+        }
+      ]
+    },
+    {
+      "title": "Hard Things Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/hard-things-section.md"
         }
       ]
     },
