@@ -432,6 +432,16 @@
       ]
     },
     {
+      "title": "Workflows Details Slide ",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/13-workflows-details.md"
+        }
+      ]
+    },
+    {
       "title": "Workflows Code Setup Agents",
       "description": "Highlight code.",
       "steps": [
@@ -460,16 +470,6 @@
           "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
           "position": "192:207",
           "highlightWholeLine": true
-        }
-      ]
-    },
-    {
-      "title": "Workflows Details Slide ",
-      "description": "Show a slide ",
-      "steps": [
-        {
-          "action": "openSlide",
-          "path": ".demo/slides/13-workflows-details.md"
         }
       ]
     },

@@ -86,9 +86,10 @@ public sealed class CFPWorkflow : ScenarioBase
             switch (evt)
             {
                 case AgentRunUpdateEvent agentUpdate:
-                    // Stream agent output in real-time
+                    // Stream agent output in real-time, if it's not already consumed
                     if (!string.IsNullOrEmpty(agentUpdate.Update.Text))
                     {
+                        Console.WriteLine("AgentRunUpdateEvent triggered!");
                         Console.Write(agentUpdate.Update.Text);
                     }
                     break;
@@ -102,11 +103,9 @@ public sealed class CFPWorkflow : ScenarioBase
                         Console.WriteLine("<< THE CRITIC HAS APPROVED! Here's your polished CFP >>");
                         Console.ResetColor();
                         Console.WriteLine(new string('=', 80));
-                        Console.WriteLine();
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine(output.Data);
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        Console.WriteLine("\n" + output.Data + "\n");
                         Console.ResetColor();
-                        Console.WriteLine();
                         Console.WriteLine(new string('=', 80));
                     }
                     break;
@@ -247,6 +246,7 @@ internal sealed class WriterExecutor : Executor
     {
         FlowState state = await FlowStateHelpers.ReadFlowStateAsync(context);
 
+        Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine($"\n=== Writer (Iteration {state.Iteration}) ===\n");
 
         StringBuilder sb = new();
@@ -258,8 +258,7 @@ internal sealed class WriterExecutor : Executor
                 Console.Write(update.Text);
             }
         }
-        Console.WriteLine("\n");
-
+        Console.ResetColor();
         string text = sb.ToString();
         state.History.Add(new ChatMessage(ChatRole.Assistant, text));
         await FlowStateHelpers.SaveFlowStateAsync(context, state);
@@ -308,22 +307,11 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
     {
         FlowState state = await FlowStateHelpers.ReadFlowStateAsync(context);
 
-        Console.ForegroundColor = ConsoleColor.Blue;
-        Console.WriteLine($"=== Critic (Iteration {state.Iteration}) ===\n");
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.WriteLine($"\n\n=== Critic (Iteration {state.Iteration}) ===\n");
 
         // Use RunStreamingAsync to get streaming updates, then deserialize at the end
         IAsyncEnumerable<AgentRunResponseUpdate> updates = _agent.RunStreamingAsync(message, cancellationToken: cancellationToken);
-
-        // Stream the output in real-time (for any rationale/explanation)
-        await foreach (AgentRunResponseUpdate update in updates)
-        {
-            if (!string.IsNullOrEmpty(update.Text))
-            {
-                Console.Write(update.Text);
-            }
-        }
-        Console.WriteLine("\n");
-        Console.ResetColor();
 
         // Convert the stream to a response and deserialize the structured output
         AgentRunResponse response = await updates.ToAgentRunResponseAsync(cancellationToken);
@@ -334,17 +322,15 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
         {
             Console.WriteLine($"Feedback: {decision.Feedback}");
         }
-        Console.WriteLine();
 
         // Safety: approve if max iterations reached
         if (!decision.Approved && state.Iteration >= CFPWorkflow.MaxIterations)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"! Max iterations ({CFPWorkflow.MaxIterations}) reached - auto-approving");
-            Console.ResetColor();
+            Console.WriteLine($"\n! Max iterations ({CFPWorkflow.MaxIterations}) reached - auto-approving");
             decision.Approved = true;
-            decision.Feedback = "";
         }
+        Console.ResetColor();
 
         // Increment iteration ONLY if rejecting (will loop back to Writer)
         if (!decision.Approved)
@@ -354,7 +340,7 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
 
         // Store the decision in history
         state.History.Add(new ChatMessage(ChatRole.Assistant,
-            $"[Decision: {(decision.Approved ? "Approved" : "Needs Revision")}] {decision.Feedback}"));
+            $"\n[Decision: {(decision.Approved ? "Approved" : "Needs Revision")}] {decision.Feedback}"));
         await FlowStateHelpers.SaveFlowStateAsync(context, state);
 
         // Populate workflow-specific fields

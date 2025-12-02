@@ -1,6 +1,6 @@
 ---
 theme: quantum
-layout: default
+layout: two-columns
 transition: fadeIn
 ---
 
@@ -8,6 +8,11 @@ transition: fadeIn
 
 - Build complex workflows
   - Agents
-  - Other Integrations
-  - Human Interactions
+  - Other integrations
+  - Human interactions
+  - Strong typing
+  - Clearly defined workflow order
   
+  ::right::
+
+<img width="90%" src=".demo/img/foundry-workflow.png" alt="Presenter">
