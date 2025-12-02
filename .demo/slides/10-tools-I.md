@@ -6,6 +6,6 @@ transition: fadeIn
 
 # Tools
 
-- Any function is a Tool
+- Any method is a Tool
 - Use `AIFunctionFactory.Create()`
 - Use `DescriptionAttribute` to enhance context for the LLM

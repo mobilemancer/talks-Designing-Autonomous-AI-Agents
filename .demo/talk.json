@@ -678,6 +678,16 @@
       ]
     },
     {
+      "title": "Hard Things",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/15-hard-things-II.md"
+        }
+      ]
+    },
+    {
       "title": "Hard Things II",
       "description": "Show a slide ",
       "steps": [

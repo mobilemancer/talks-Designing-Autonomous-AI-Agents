@@ -10,3 +10,5 @@ transition: fadeIn
   - Modification of system prompt
   - Modification of context
     - Tools / Functions
+
+## How hard can it be?...
