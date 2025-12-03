@@ -532,6 +532,16 @@
       ]
     },
     {
+      "title": "Workflows image Slide ",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/13-workflows-image.md"
+        }
+      ]
+    },
+    {
       "title": "Workflows Code Setup Agents",
       "description": "Highlight code.",
       "steps": [
@@ -628,16 +638,6 @@
       ]
     },
     {
-      "title": "Demo Section",
-      "description": "Show a slide ",
-      "steps": [
-        {
-          "action": "openSlide",
-          "path": ".demo/slides/demo-section.md"
-        }
-      ]
-    },
-    {
       "title": "Models Section",
       "description": "Show a section slide ",
       "steps": [
@@ -694,6 +694,16 @@
         {
           "action": "imagePreview",
           "path": ".demo/img/one-does-not.png"
+        }
+      ]
+    },
+    {
+      "title": "Demo Section",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/demo-section.md"
         }
       ]
     },
