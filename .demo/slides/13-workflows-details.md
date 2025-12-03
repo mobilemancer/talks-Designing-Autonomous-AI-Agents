@@ -11,7 +11,7 @@ transition: fadeIn
 - Executors - The processing units, AI agents or other logic
   - Typed input
   - Produces typed output or events
-- Edges - Defines the connections, defines the flow of information
+- Edges - Defines the connections, and flow of information
   - Direct
   - Conditional
   - Fan-out, Fan-in
