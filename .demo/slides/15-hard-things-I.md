@@ -9,7 +9,7 @@ transition: fadeIn
 
 - Memory
   - Short term
-  - Long term
+  - Long term *
   - Context management
   - Scratchpad
 - Tool calling (Functions / Tools / MCPs)

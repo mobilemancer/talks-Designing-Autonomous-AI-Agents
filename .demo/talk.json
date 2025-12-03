@@ -330,7 +330,7 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
-          "position": "30:55",
+          "position": "30:54",
           "highlightWholeLine": true
         }
       ]

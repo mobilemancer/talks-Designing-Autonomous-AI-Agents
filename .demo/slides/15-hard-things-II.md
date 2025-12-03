@@ -9,8 +9,8 @@ transition: fadeIn
 
 - Web browsing
   - HTML is an awful lot of tokens!
-  - Exchange format, for ex Markdown
-  - Use external tools
+    - Swap representation format (Markdown)
+  - Use external tools (Grounding with Bing search, Tavily)
 - Economy
   - Still a bit too complex
   - Most models hesitate (or refuse) to give answers
