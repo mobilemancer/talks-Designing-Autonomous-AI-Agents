@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit",
     "eliostruyf.vscode-demo-time"
   ]
 }
