@@ -4,7 +4,7 @@ public sealed class Middleware : ScenarioBase
 {
     public override string Name => "Middleware";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),
@@ -23,7 +23,7 @@ public sealed class Middleware : ScenarioBase
             .Use(CustomFunctionCallingMiddleware)
             .Build();
 
-        var response = await agent.RunAsync("What's the weather in Malmö");
+        var response = await agent.RunAsync("What's the weather in Manchester");
 
         Console.WriteLine(response);
     }

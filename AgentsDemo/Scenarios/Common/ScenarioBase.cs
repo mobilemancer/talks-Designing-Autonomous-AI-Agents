@@ -15,11 +15,19 @@ public abstract class ScenarioBase : IScenario
     public async Task RunAsync()
     {
         var stopwatch = Stopwatch.StartNew();
-        Console.WriteLine($"=== {Name} ===");
-        await ExecuteAsync().ConfigureAwait(false);
+
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine($"\n~== {Name} ==~\n");
+        Console.ForegroundColor = ConsoleColor.White;
+
+        await ExecuteDemoAsync().ConfigureAwait(false);
+
         stopwatch.Stop();
-        Console.WriteLine($"=== Completed in {stopwatch.Elapsed} ===");
+
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.WriteLine($"\n~== Demo Completed in {stopwatch.Elapsed} ==~\n");
+        Console.ForegroundColor = ConsoleColor.White;
     }
 
-    protected abstract Task ExecuteAsync();
+    protected abstract Task ExecuteDemoAsync();
 }

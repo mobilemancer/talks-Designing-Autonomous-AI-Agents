@@ -4,6 +4,6 @@ layout: intro
 transition: fadeIn
 ---
 
-# Building Autonomous Agents
+# Advanced Autonomous AI Agents
 
-A guide to building AI agents in .NET, backed by Azure AI Foundry.
+Building autonomous AI agents in .NET, using Microsoft Foundry

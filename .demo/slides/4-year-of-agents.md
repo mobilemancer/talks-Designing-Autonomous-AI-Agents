@@ -5,9 +5,9 @@ image: .demo/img/agent.png
 transition: fadeIn
 ---
 
-# 2025 - Year of the Agents
+# 2025 - Year of the Agents?
 
-The pieces are finally in place:
+The pieces are finally in place!
 
 - ✅ Powerful foundation models
 - ✅ Context through RAG

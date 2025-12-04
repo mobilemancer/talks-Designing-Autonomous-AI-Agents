@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch AgentsDemo",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentsDemo/bin/Debug/net9.0/AgentsDemo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/AgentsDemo",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        }
+    ]
+}

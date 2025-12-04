@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using AgentsDemo.Scenarios;
 
 namespace AgentsDemo.Services;

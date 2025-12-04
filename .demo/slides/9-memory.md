@@ -9,12 +9,6 @@ transition: fadeIn
 - `AgentThread` abstraction
   - Serialize it and save it
 
-### Custom Store
+## Custom Store
 
 - Implement a `ChatMessageStore`
-
-### Long term memory
-
-- Reduction
-- Summarization
-- Weight

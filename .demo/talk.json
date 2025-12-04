@@ -55,6 +55,16 @@
       ]
     },
     {
+      "title": "Foundry Section",
+      "description": "Show a slide.",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/foundry-section.md"
+        }
+      ]
+    },
+    {
       "title": "Foundry",
       "description": "Show a slide.",
       "steps": [
@@ -85,8 +95,18 @@
       ]
     },
     {
+      "title": "Microsoft Agent Framework Section",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF-section.md"
+        }
+      ]
+    },
+    {
       "title": "Microsoft Agent Framework",
-      "description": "Show a slide and highlight a function in code.",
+      "description": "Show a slide",
       "steps": [
         {
           "action": "openSlide",
@@ -96,11 +116,21 @@
     },
     {
       "title": "Microsoft Agent Framework",
-      "description": "Show a slide and highlight a function in code.",
+      "description": "Show a slide",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/6-MAF-supported-agents.md"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Agent Framework",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/6-MAF-supported-agents-II.md"
         }
       ]
     },
@@ -120,13 +150,23 @@
       "steps": [
         {
           "action": "open",
-          "path": "AgentsDemo/Scenarios/SimpleChat.cs"
+          "path": "AgentsDemo/Scenarios/Chat/SimpleChat.cs"
         },
         {
           "action": "highlight",
-          "path": "AgentsDemo/Scenarios/SimpleChat.cs",
+          "path": "AgentsDemo/Scenarios/chat/SimpleChat.cs",
           "position": "9:17",
           "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Memory Section",
+      "description": "Show a slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/memory-section.md"
         }
       ]
     },
@@ -170,13 +210,23 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Memory/MultiTurnChat.cs",
-          "position": "23",
+          "position": "21:29",
           "highlightWholeLine": true
         }
       ]
     },
     {
-      "title": "Tool I Slide",
+      "title": "Tools Section",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/tools-section.md"
+        }
+      ]
+    },
+    {
+      "title": "Functions as Tools Slide",
       "description": "Show a slide ",
       "steps": [
         {
@@ -186,7 +236,7 @@
       ]
     },
     {
-      "title": "Tool I Code",
+      "title": "Functions as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -202,7 +252,7 @@
       ]
     },
     {
-      "title": "Tool I Code",
+      "title": "Functions as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -218,7 +268,7 @@
       ]
     },
     {
-      "title": "Tool II Slide",
+      "title": "Agents as Tools Slide",
       "description": "Show a slide ",
       "steps": [
         {
@@ -228,7 +278,7 @@
       ]
     },
     {
-      "title": "Tool II Code",
+      "title": "Agents as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -244,7 +294,7 @@
       ]
     },
     {
-      "title": "Tool II Code",
+      "title": "Agents as Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -260,17 +310,17 @@
       ]
     },
     {
-      "title": "Tool IV Slide",
+      "title": "MCP Tools Slide",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/slides/10-tools-IV.md"
+          "path": ".demo/slides/10-tools-V.md"
         }
       ]
     },
     {
-      "title": "Tool IV Code",
+      "title": "MCP Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -280,13 +330,13 @@
         {
           "action": "highlight",
           "path": "AgentsDemo/Scenarios/Tools/MCPTools.cs",
-          "position": "30:55",
+          "position": "30:54",
           "highlightWholeLine": true
         }
       ]
     },
     {
-      "title": "Tool IV Code",
+      "title": "MCP Tools Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -302,12 +352,32 @@
       ]
     },
     {
-      "title": "Tool III Slide",
+      "title": "Tools in Foundry Slide",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/10-tools-III.md"
+        }
+      ]
+    },
+    {
+      "title": "Tools in Foundry Slide 2",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/10-tools-IV.md"
+        }
+      ]
+    },
+    {
+      "title": "Middleware Section",
+      "description": "Show a section slide",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/middleware-section.md"
         }
       ]
     },
@@ -322,7 +392,7 @@
       ]
     },
     {
-      "title": "Middleware Code",
+      "title": "Middleware AgentRun Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -338,7 +408,7 @@
       ]
     },
     {
-      "title": "Middleware Code",
+      "title": "Middleware FunctionCalling Code",
       "description": "Highlight code.",
       "steps": [
         {
@@ -366,6 +436,16 @@
           "path": "AgentsDemo/Scenarios/Middleware/Middleware.cs",
           "position": "20:24",
           "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Metacognition Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/metacognition-section.md"
         }
       ]
     },
@@ -422,6 +502,16 @@
       ]
     },
     {
+      "title": "Workflows Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/workflows-section.md"
+        }
+      ]
+    },
+    {
       "title": "Workflows Slide",
       "description": "Show a slide ",
       "steps": [
@@ -442,12 +532,138 @@
       ]
     },
     {
+      "title": "Workflows image Slide ",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/13-workflows-image.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Setup Agents",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "14:30",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "191:206",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "208:211",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "216:222",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "163:181",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Workflows Code Writer Executor",
+      "description": "Highlight code.",
+      "steps": [
+        {
+          "action": "open",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs"
+        },
+        {
+          "action": "highlight",
+          "path": "AgentsDemo/Scenarios/Workflows/CFPWorkflow.cs",
+          "position": "227:237",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "title": "Models Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/models-section.md"
+        }
+      ]
+    },
+    {
       "title": "Models",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/14-models.md"
+        }
+      ]
+    },
+    {
+      "title": "Hard Things Section",
+      "description": "Show a section slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/hard-things-section.md"
         }
       ]
     },
@@ -462,12 +678,32 @@
       ]
     },
     {
+      "title": "Hard Things",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/15-hard-things-II.md"
+        }
+      ]
+    },
+    {
       "title": "Hard Things II",
       "description": "Show a slide ",
       "steps": [
         {
           "action": "imagePreview",
           "path": ".demo/img/one-does-not.png"
+        }
+      ]
+    },
+    {
+      "title": "Demo Section",
+      "description": "Show a slide ",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/slides/demo-section.md"
         }
       ]
     },
@@ -483,5 +719,5 @@
     }
   ],
   "description": "How to build autonomous agents with Microsoft Agent Framework and Azure Foundry",
-  "timer": 40
+  "timer": 60
 }

@@ -5,7 +5,7 @@ image: .demo/img/foundry.jpg
 transition: fadeIn
 ---
 
-# Azure Foundry
+# Microsoft Foundry
 
 - **Models**
 - Eval

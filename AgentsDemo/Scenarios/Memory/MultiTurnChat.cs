@@ -4,7 +4,7 @@ public sealed class MultiTurnChat : ScenarioBase
 {
     public override string Name => "Multi turn chat";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),
@@ -27,9 +27,5 @@ public sealed class MultiTurnChat : ScenarioBase
         Console.WriteLine(prompt);
         response = await agent.RunAsync(prompt, thread);
         Console.WriteLine(response);
-
-        // Console.WriteLine("---");
-        // Console.WriteLine("Thread as JSON:");
-        // Console.WriteLine(thread.Serialize(JsonSerializerOptions.Web));
     }
 }

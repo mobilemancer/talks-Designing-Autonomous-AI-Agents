@@ -6,8 +6,16 @@ transition: fadeIn
 
 # Workflow Details
 
-- Executors - The processing units
-- Edges - Defines the connections, defines the flow of information
+- Workflow - A combination of **Executors** and **Edges**
+  - Use `WorkFlowBuilder` to wire up Executors and Edges
+- Executors - The processing units, AI agents or other logic
+  - Typed input
+  - Produces typed output or events
+- Edges - Defines the connections, and flow of information
+  - Direct
+  - Conditional
+  - Fan-out, Fan-in
 - Events - Provides observability
-- Workflow - A combination of Executors and Edges
+  - Several available that tracks the workflow lifecycle
+  - Possible to define proprietary Events
   

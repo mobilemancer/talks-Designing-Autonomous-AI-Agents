@@ -4,7 +4,7 @@ public sealed class AgentAsTool : ScenarioBase
 {
     public override string Name => "Agent as Tool";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent weatherAgent = new AzureOpenAIClient(
             new Uri(endpoint),
@@ -30,7 +30,7 @@ public sealed class AgentAsTool : ScenarioBase
 
         AgentThread thread = agent.GetNewThread();
 
-        var prompt = "Tell me the weather in Malmö.";
+        var prompt = "Tell me the weather in Manchester.";
         Console.WriteLine(prompt);
         var response = await agent.RunAsync(prompt, thread);
         Console.WriteLine(response);
@@ -40,8 +40,8 @@ public sealed class AgentAsTool : ScenarioBase
     static string GetWeather([Description("The location to get the weather for.")] string location)
     {
         Console.WriteLine($"Weather requested for {location}.");
-        return location == "Malmö"
-            ? "The weather in Malmö is 5 degrees but still awesome!"
+        return location == "Manchester"
+            ? "The weather in Manchester is 5 degrees but still awesome!"
             : $"The weather in {location} cold and booring.";
     }
 }

@@ -4,7 +4,7 @@ public sealed class MCPTools : ScenarioBase
 {
     public override string Name => "MCP as Tools";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         (McpClient mcpClient, IList<McpClientTool> mcpTools) = await GetMCPTools()
             .ConfigureAwait(false);
@@ -20,8 +20,8 @@ public sealed class MCPTools : ScenarioBase
                 tools: [.. mcpTools.Cast<AITool>()]
             );
 
-        var prompt = "List public repos in github for the user 'mobilemancer'";
         Console.WriteLine("---");
+        var prompt = "Search github for the user 'mobilemancer'";
         Console.WriteLine(prompt);
         var response = await agent.RunAsync(prompt, agent.GetNewThread());
         Console.WriteLine(response);
@@ -43,13 +43,12 @@ public sealed class MCPTools : ScenarioBase
 
         // Retrieve the list of tools available on the GitHub server
         var mcpTools = await mcpClient.ListToolsAsync().ConfigureAwait(false);
-        Console.WriteLine("---");
-        Console.WriteLine("Tools available from the MCP server");
+        Console.WriteLine("--- Tools available from the MCP server ---");
         foreach (var t in mcpTools)
         {
             Console.WriteLine(t.Name);
         }
-        Console.WriteLine("---");
+        Console.WriteLine("---\n");
 
         return (mcpClient, mcpTools);
     }

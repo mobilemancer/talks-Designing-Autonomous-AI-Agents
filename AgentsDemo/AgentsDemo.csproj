@@ -5,10 +5,12 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <NoWarn>OPENAI001</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Azure.AI.OpenAI" Version="2.5.0-beta.1" />
+    <PackageReference Include="Azure.AI.Projects" Version="1.2.*-*" />
     <PackageReference Include="Azure.Identity" Version="1.17.0" />
     <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-preview.251016.1" />
     <PackageReference Include="Microsoft.Agents.AI.Workflows" Version="1.0.0-preview.251105.1" />

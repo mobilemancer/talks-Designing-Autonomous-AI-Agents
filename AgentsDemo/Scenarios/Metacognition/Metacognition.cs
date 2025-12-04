@@ -4,7 +4,7 @@ public sealed class Metagognition : ScenarioBase
 {
     public override string Name => "Metacognition";
 
-    protected override async Task ExecuteAsync()
+    protected override async Task ExecuteDemoAsync()
     {
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),
@@ -15,7 +15,7 @@ public sealed class Metagognition : ScenarioBase
                 name: "Fact gatherer",
                 instructions: @"
                 You are a senior content researcher and editor, helping the user gather information.
-                - Before ouputing research content to the user, make sure to do it according to their preferences.
+                - Before ouputing research content to the user, make sure to read thier preferences and act accordingly.
                 - Use search tools to retrieve content.
                 - Update users preferences when needed.
                 ",
@@ -64,7 +64,7 @@ public sealed class Metagognition : ScenarioBase
     [Description("Search for things.")]
     AIAgent SearchTool()
     {
-        Console.WriteLine($"Calling search agent");
+        Console.WriteLine($"Adding search agent");
 
         AIAgent agent = new AzureOpenAIClient(
             new Uri(endpoint),
