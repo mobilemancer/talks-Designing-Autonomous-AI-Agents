@@ -375,7 +375,7 @@ internal sealed class SummaryExecutor : Executor<CriticDecision, ChatMessage>
         FlowState state = await FlowStateHelpers.ReadFlowStateAsync(context);
 
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine($"\n\n=== Summarizer (After {state.Iteration} iteration(s)) ===\n");
+        Console.WriteLine($"\n\n=== Summarizer (After {state.Iteration - 1} iteration{(state.Iteration == 2 ? "" : "s")}) ===\n");
 
         string prompt;
         if (decision.Approved)
