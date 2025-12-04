@@ -100,7 +100,7 @@ public sealed class CFPWorkflow : ScenarioBase
                         hasShownFinalOutput = true;
                         Console.WriteLine("\n\n" + new string('=', 80));
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("<< THE CRITIC HAS APPROVED! Here's your polished CFP >>");
+                        Console.WriteLine("<< Here's your polished CFP >>");
                         Console.ResetColor();
                         Console.WriteLine(new string('=', 80));
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -343,19 +343,67 @@ internal sealed class CriticExecutor : Executor<ChatMessage, CriticDecision>
     }
 }
 
+
+
+
+
 /// <summary>
 /// Executor that yields the final approved content as workflow output.
 /// </summary>
 internal sealed class SummaryExecutor : Executor<CriticDecision, ChatMessage>
 {
-    public SummaryExecutor(IChatClient _) : base("Summary") { }
+    private readonly AIAgent _agent;
+
+    public SummaryExecutor(IChatClient chatClient) : base("Summary")
+    {
+        _agent = new ChatClientAgent(
+            chatClient,
+            name: "Summarizer",
+            instructions: """
+                Summarize the abstract session between the critic and the abstract producer.
+                A finished abstract should be maximum three paragraphs long and between 200 to 300 chars long.
+                Output only the final polished abstract, nothing else.
+                """
+        );
+    }
 
     public override async ValueTask<ChatMessage> HandleAsync(
-        CriticDecision message,
+        CriticDecision decision,
         IWorkflowContext context,
         CancellationToken cancellationToken = default)
     {
-        ChatMessage result = new(ChatRole.Assistant, message.Approved ? "" : "The critic never approved, iteration max hit! :(\n\n" + message.Content);
+        FlowState state = await FlowStateHelpers.ReadFlowStateAsync(context);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"\n\n=== Summarizer (After {state.Iteration} iteration(s)) ===\n");
+
+        string prompt;
+        if (decision.Approved)
+        {
+            prompt = $"Polish and finalize this approved abstract:\n\n{decision.Content}";
+        }
+        else
+        {
+            prompt = $"The critic never fully approved after {decision.Iteration} iterations. " +
+                     $"Please create the best possible final version from this content:\n\n{decision.Content}";
+        }
+
+        StringBuilder sb = new();
+        await foreach (AgentRunResponseUpdate update in _agent.RunStreamingAsync(
+            new ChatMessage(ChatRole.User, prompt),
+            cancellationToken: cancellationToken))
+        {
+            if (!string.IsNullOrEmpty(update.Text))
+            {
+                sb.Append(update.Text);
+                Console.Write(update.Text);
+            }
+        }
+        Console.ResetColor();
+
+        string finalContent = sb.ToString();
+        ChatMessage result = new(ChatRole.Assistant, finalContent);
+
         await context.YieldOutputAsync(result, cancellationToken);
         return result;
     }
